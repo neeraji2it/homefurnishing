@@ -2,7 +2,7 @@ class HomesController < ApplicationController
 	def index
     @featured = Product.featured
     @advices = Advice.all
-    @banner_images = Banner.all
+    @banner_images = Banner.visible
     @guides = BuyingGuide.all
   end
 

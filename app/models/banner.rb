@@ -5,4 +5,6 @@ class Banner < ActiveRecord::Base
 	
 	validates_attachment_size(:image, :less_than => 10.megabytes)
 	validates :image_description, :small_description, :image, :presence => true
+
+  scope :visible, -> {where("visible=?", true)}
 end

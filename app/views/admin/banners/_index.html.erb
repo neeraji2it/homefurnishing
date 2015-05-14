@@ -13,8 +13,8 @@
           <th>Banner Image</th>
           <th>First Text</th>
           <th>Second Text</th>
-          <th></th>
-    
+          <th>Hide / Show</th>
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +24,13 @@
         <td><%= image_tag(banner.image.url(:thumb), height: "60", width: "80") %></td>
         <td><%= banner.image_description.html_safe %></td>
         <td><%= banner.small_description.try(:html_safe) %></td>
+        <td>
+        <% if(banner.visible == true) %>
+          <%= link_to "Hide", visible_admin_banner_path(:id => banner.id, :visible => false), method: :put %>
+        <% else %>
+          <%= link_to "Show", visible_admin_banner_path(:id => banner.id, :visible => true), method: :put %>
+        <% end %>  
+        </td>
             <td class="da-icon-column">
               <%= link_to admin_banner_path(banner.id) do %>
                 <img src="/assets/admin/images/icons/color/magnifier.png" />
@@ -37,12 +44,9 @@
                 <img src="/assets/admin/images/icons/color/cross.png" />
               <% end %>
             </td>
-
           </tr>
         <% end %>
       </tbody>
     </table>
   </div>
 </div>   
-
-

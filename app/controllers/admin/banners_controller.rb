@@ -39,8 +39,15 @@ def destroy
   @banner_image.destroy
   redirect_to admin_banners_path
 end
-private
-def banner_params
-  params.require(:banner).permit!
+
+def visible
+  @banner = Banner.find(params[:id])
+  (@banner.visible==true) ? (@banner.update_attributes(:visible => false)) : (@banner.update_attributes(:visible => true))
+  redirect_to admin_banners_path
 end
+
+  private
+  def banner_params
+    params.require(:banner).permit!
+  end
 end

@@ -12,7 +12,11 @@ Furnitureapp::Application.routes.draw do
         put :order_status
       end
     end
-    resources :banners
+    resources :banners do 
+      member do 
+        put :visible
+      end
+    end
     resources :products do
       member do
         delete :delete_img
