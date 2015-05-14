@@ -30,9 +30,9 @@
      display: block;
     font-family: Helvetica,Arial,sans-serif;
     font-size: 12px;
-    height: 45px;
-    line-height: 32px;
-    padding: 6px 30px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 30px;
     position: relative;
     text-transform: uppercase;
         
@@ -46,7 +46,7 @@
     position: absolute;
     display: inline-block;
     width: auto;
-    top: 45px;
+    top: 20px;
     left: auto;
     background-color: #fbfbfb;
     opacity: 0;
