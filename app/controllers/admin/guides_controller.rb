@@ -39,6 +39,12 @@ class Admin::GuidesController < ApplicationController
       redirect_to admin_guides_path
     end
   end
+
+  def visible
+    @guide = BuyingGuide.find(params[:id])
+    (@guide.visible==true) ? (@guide.update_attributes(:visible => false)) : (@guide.update_attributes(:visible => true))
+    redirect_to admin_guides_path
+  end
   
   private
   def guides_params

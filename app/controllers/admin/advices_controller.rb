@@ -40,6 +40,12 @@ class Admin::AdvicesController < ApplicationController
       redirect_to admin_advices_path
     end
   end
+
+  def visible
+    @advice = Advice.find(params[:id])
+    (@advice.visible==true) ? (@advice.update_attributes(:visible => false)) : (@advice.update_attributes(:visible => true))
+    redirect_to admin_advices_path
+  end
   
   private
   def advice_params

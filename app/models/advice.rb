@@ -3,4 +3,5 @@ class Advice < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   validates :title, :avatar, :description, :presence => true
   validates :title, uniqueness: true
+  scope :visible, -> {where("visible=?", true)}
 end

@@ -12,6 +12,7 @@
             <th>Title</th>
             <th>Image</th>
             <th>Description</th>
+            <th>Hide / Show</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -21,6 +22,13 @@
               <td><%= advice.title.capitalize %></td>
               <td><%= image_tag advice.avatar.url(:small) %></td>
               <td><%= advice.description.html_safe %></td>
+              <td>
+                <% if(advice.visible == true) %>
+                  <%= link_to "Hide", visible_admin_advice_path(:id => advice.id, :visible => false), method: :put %>
+                <% else %>
+                  <%= link_to "Show", visible_admin_advice_path(:id => advice.id, :visible => true), method: :put %>
+                <% end %>  
+              </td>
               <td class="da-icon-column">
                 <%= link_to edit_admin_advice_path(advice.id) do %>  
                   <img src="/assets/admin/images/icons/color/pencil.png" />

@@ -49,8 +49,16 @@ Furnitureapp::Application.routes.draw do
       end
     end
     resources :stocks
-    resources :advices
-    resources :guides
+    resources :advices do 
+      member do 
+        put :visible
+      end
+    end
+    resources :guides do 
+      member do 
+        put :visible
+      end
+    end
   end
   resources :welcome 
   resources :profiles do
