@@ -64,6 +64,21 @@ div#da-header #da-header-top #da-logo-img img {
   text-align: center;
   width: 55px;
 }
+
+.circleSmall {
+  background-color: #0eabdf;
+  border: 1px solid #e3e3e3;
+  border-radius: 22px;
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  height: 39px;
+  line-height: 37px;
+  margin: -11px 84px 0 auto;
+  text-align: center;
+  width: 42px;
+}
+
 /*homes show collapsible category link property*/
 .catLink {margin-top: -10px; margin-bottom: 10px;}
 .catLink a{color: #545454;}
