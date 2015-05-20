@@ -251,7 +251,7 @@ ul.menu-footer li a:hover { text-decoration: underline; }
 .box-features h5 { padding-bottom: 24px; text-transform: uppercase; }
 .box-features img { margin-bottom: 19px; }
 #slider { width: 100%l; color: #0c0c0c; font-size: 30px; text-align: center; font-family: 'Conv_18925_HelveticaNeueLt_0'; }
-#slider .box-homecontent { top: 148px; text-align: center; position: absolute;  margin-left: 15px; }
+#slider .box-homecontent { top: 148px; text-align: center; position: absolute;  margin-left: 86px; }
 #slider #myCarousel .item img { background-size: 100% auto; margin: 0 auto; width: 100%; border-bottom: 1px solid #dddddd; }
 #slider #myCarousel .carousel-control { top: 260px; width: 62px; height: 50px; background: url(/assets/images/sprit-icon.png) no-repeat 18px -681px;}
 #slider #myCarousel .left.carousel-control, #myCarousel .right.carousel-control { filter: none; }
