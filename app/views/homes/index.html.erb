@@ -3,7 +3,7 @@
     <div class="bxslider-banner">
       <% for image in @banner_images %>
         <div class="item active">
-          <img title="" src="<%= image.image.url(:original) %>" width='960' height="520"/>
+          <img title="" src="<%= image.image.url(:original) %>" width='942' height="520" style="margin-left: 176px;"/>
           <div class="container">
             <div class="box-homecontent clearfix">
               <div class="content-banner">
@@ -233,7 +233,7 @@
     });
 
     $('.bxslider-banner').bxSlider({
-      auto: true,
+      
       infiniteLoop: true,
       speed: 4000,
       pager: false,
