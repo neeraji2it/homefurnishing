@@ -34,7 +34,7 @@
     padding: 0px 38px;
     position: relative;
     text-transform: uppercase;
-    color: #c29d12;;    
+    color: #c29d12;    
 }
 .nav > li:hover > a { background: #000; border-radius: 5px; color: #fff; }
 
