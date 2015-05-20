@@ -25,9 +25,8 @@
     display: block;
     float: left;
 }
-.nav > li > a {
-    
-     display: block;
+.nav > li > a {    
+    display: block;
     font-family: Helvetica,Arial,sans-serif;
     font-size: 12px;
     height: 20px;
@@ -36,11 +35,8 @@
     position: relative;
     text-transform: uppercase;
     color: #c29d12;;    
-   
 }
 .nav > li:hover > a { background: #000; border-radius: 5px; color: #fff; }
- 
-
 
 .nav > li > .menu_sub {
     position: absolute;
