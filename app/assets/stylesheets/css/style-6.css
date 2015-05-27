@@ -71,6 +71,18 @@
     height: auto;
 
 }
+.nav li:nth-child(n+6)> .menu_sub{
+    visibility:visible;
+    clear:both;
+    right:0;
+    width:auto;
+}
+/*.nav li:nth-last-child(2)> .menu_sub{
+    visibility:visible;
+    clear:both;
+    right:0;
+    width:350px;
+}*/
 .nav > li:hover > .menu_sub {
   opacity: 1;
 visibility: visible;
