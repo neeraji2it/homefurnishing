@@ -18,7 +18,20 @@
         
     position: relative;
     cursor: default;
-    
+     margin: 0;
+    display: table;
+    width: 100%;
+}
+ .nav li:first-child a {
+    border-left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 3px 3px 0;
+     padding-left: 12px;
+    padding-right: 0;
 }
  
 .nav > li {
@@ -31,12 +44,17 @@
     font-size: 12px;
     height: 20px;
     line-height: 20px;
-    padding: 0px 44px;
+    /*padding: 0px 38px;*/
     position: relative;
     text-transform: uppercase;
     color: #c29d12;    
+    display: table-cell;
+   /* width: 1%;*/
+    float: none;
+    text-align: center;
+    padding-right:86px;
 }
-.nav > li:hover > a { background: #000; border-radius: 5px; color: #fff; }
+.nav > li:hover > a { background:none;   }
 
 .nav > li > .menu_sub {
     position: absolute;
