@@ -305,5 +305,15 @@ ul.navbar-nav  li a{
 
 ul.navbar-nav > li a:hover, ul.navbar-nav > li a.active { color: #FFF; border-radius: 3px; background-color: #0c0c0c; }
 
-.menu-margin { margin-left: 121px; }
-.sliposi{ margin-left: 168px; margin-right: 168px;}
+
+
+@media (max-width:1199px){
+    .nav > li > a{ padding-right:81px}
+}
+@media (max-width: 1024px){
+    
+    .nav > li > a{ padding-right: 80px}
+}
+@media (max-width: 768px){
+    .nav > li > a{ padding-right: 30px}
+}
