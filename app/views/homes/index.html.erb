@@ -1,9 +1,10 @@
 <% if @banner_images.present? %>
-  <div id="slider">
+  <div class="sliposi">
+    <div id="slider">
     <div class="bxslider-banner">
       <% for image in @banner_images %>
         <div class="item active">
-          <img title="" src="<%= image.image.url(:original) %>" width='942' height="520" style="margin-left: 176px;"/>
+          <img title="" src="<%= image.image.url(:original) %>" width='956' height="520"/>
           <div class="container">
             <div class="box-homecontent clearfix">
               <div class="content-banner">
@@ -17,6 +18,7 @@
       <% end %>
     </div>
   </div>
+   </div>
 <% end%>
 
 <article>

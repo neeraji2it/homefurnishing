@@ -44,12 +44,10 @@
     font-size: 12px;
     height: 20px;
     line-height: 20px;
-    /*padding: 0px 38px;*/
     position: relative;
     text-transform: uppercase;
     color: #c29d12;    
     display: table-cell;
-   /* width: 1%;*/
     float: none;
     text-align: center;
     padding-right:85px;
@@ -71,18 +69,11 @@
     height: auto;
 
 }
-.nav li:nth-child(n+6)> .menu_sub{
-    visibility:visible;
-    clear:both;
+.nav > li:nth-child(n+6)> .menu_sub{
     right:0;
     width:auto;
 }
-/*.nav li:nth-last-child(2)> .menu_sub{
-    visibility:visible;
-    clear:both;
-    right:0;
-    width:350px;
-}*/
+
 .nav > li:hover > .menu_sub {
   opacity: 1;
 visibility: visible;
@@ -315,3 +306,4 @@ ul.navbar-nav  li a{
 ul.navbar-nav > li a:hover, ul.navbar-nav > li a.active { color: #FFF; border-radius: 3px; background-color: #0c0c0c; }
 
 .menu-margin { margin-left: 121px; }
+.sliposi{ margin-left: 168px; margin-right: 168px;}
