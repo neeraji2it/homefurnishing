@@ -1,0 +1,38 @@
+<div class="box-categories">
+  <h4><%= @header %></h4>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <% @categories.each do |category| %>
+      <% if category.present? %>
+        <% @cat_products = category.products %>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h2 class="panel-title">
+              <a class="collapsed accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne-<%= category.id %>" aria-expanded="false" aria-controls="collapseOne" title="Bedroom"> 
+                <div class="catLink">
+                  <%= link_to category.name.capitalize, home_path(category.id) %>
+                </div>
+              </a>
+            </h2>
+          </div>
+        <% end %>
+        <div id="collapseOne-<%= category.id %>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            <ul>
+              <%if @cat_products.present? %>
+                <% @cat_products.each do |product| %>
+                  <li>
+                    <%= link_to product.name.capitalize, single_product_home_path(product.id) %>
+                  </li>
+                <% end %>
+              <%else%>
+                <li>
+                  Coming Soon!!!!!
+                </li>
+              <%end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
