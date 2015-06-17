@@ -21,7 +21,7 @@ q:before, q:after { content: ''; }
 abbr, acronym { border: 0; font-variant: normal; }
 sup { vertical-align: text-top; }
 sub { vertical-align: text-bottom; }
-input, select, textarea, button { font-family: Tahoma, Geneva, sans-serif; direction: ltr; color: #000; font-size: 12px; margin: 0em; margin: 0px; }
+input, select, textarea, button { font-family: Tahoma, Geneva, sans-serif; direction: ltr; color: #000; font-size: 8px; margin: 0em; margin: 0px; }
 input, button { overflow: visible; }
 select option { padding-left: 4px; }
 p { margin: 0px; padding-bottom: 15px; }
