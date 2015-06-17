@@ -204,7 +204,12 @@ input[type="text"].input-search:-moz-placeholder {
 opacity:1;
 }
 input[type="submit"].btn-search { background: url(/assets/images/sprit-icon-right.png) no-repeat right 12px; height: 38px; width: 20px; position: absolute; right: 1px; }
-input[type="text"].input-search { width: 51.6%; padding: 6px 34px 8px 11px; }
+input[type="text"].input-search {  border: 1px solid #ccc;
+    border-radius: 0;
+    height: 27px;
+    line-height: normal;
+   /* padding: 0 34px 8px 11px;*/
+    width: 51.6%; }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 input[type="text"].input-search { padding: 7px 34px 7px 11px; }
 }
