@@ -17,12 +17,19 @@ class HomesController < ApplicationController
   end
   
   def show
-   @sub_category = SubCategory.find(params[:id])
-   @categories = @sub_category.category.sub_categories
-   @products = @sub_category.products.paginate(:page => params[:page], :per_page => 20)
+   if params.has_key?(:param1) && params[:param1] == 'parent'
+     @category = Category.find(params[:id])
+     @categories = @category.sub_categories
+     @products = @category.products.paginate(:page => params[:page], :per_page => 20)
+     @header = @category.name
+   else 
+     @sub_category = SubCategory.find(params[:id])
+     @categories = @sub_category.category.sub_categories
+     @products = @sub_category.products.paginate(:page => params[:page], :per_page => 20)
+     @header = @sub_category.category.name
+   end
    @featured = Product.featured
  end
-
 
   def offers
     @products = Product.where("discount != ''").paginate(:page => params[:page], :per_page => 20)
@@ -35,7 +42,7 @@ end
 def single_product
   @product = Product.find(params[:id])
   @images = @product.images
-  @sub_category = @product.sub_category
+  @sub_category = @product.sub_category.present? ? (@product.sub_category) : @product.category
   @similars = @sub_category.products.where.not(id: @product.id)
 end
 

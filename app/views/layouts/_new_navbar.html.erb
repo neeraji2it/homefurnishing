@@ -1,7 +1,8 @@
 <ul class="nav">
    <% Category.where("name is not null and category_show = #{true}").includes(:sub_categories).each do |cat| %>
     <li>
-        <a href="#"><%= cat.name %></a>
+        <!-- <a href="#"><%#= cat.name %></a> -->
+        <%= link_to "#{cat.name}", home_path(:id => cat.id, :param1 => 'parent') %>
 
         <% @subCategories = cat.sub_categories %>
         <% if @subCategories.present? %>

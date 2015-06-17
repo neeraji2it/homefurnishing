@@ -32,7 +32,7 @@
           <div class="list_price col-xs-12 col-sm-6 col-md-6 col-lg-6">
             <div class="box-rightcategory">
               <div class="box-producT">
-                <span><%= link_to "Back to Category", home_path(@product.sub_category.id) %></span>
+                <span><%= link_to "Back to Category", @product.sub_category.present? ? home_path(@product.sub_category.id) : home_path(@product.category.id, :param1 => 'parent') %></span>
               </div>
               <div class="box-producT">
                 <h4><%= @product.name.capitalize %></h4>
