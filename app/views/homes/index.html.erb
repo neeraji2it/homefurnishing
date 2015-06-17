@@ -171,33 +171,35 @@
       </div>
     <% end %>
 
-    <% if @guides.present? %>
+<!--
+    <%# if @guides.present? %>
       <div class="box-featured">
         <h1><span>Buying Guides</span></h1>
         <div class="bxslider-buying-guides">
-          <% @guides.each do |guide| %>
+          <%# @guides.each do |guide| %>
             <div class="box-bedlinen">
               <div class="row">
                 <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                   <div class="buying-leftColumn">
-                    <h6><%= guide.title %></h6>
+                    <h6><%#= guide.title %></h6>
                     <div class="guide-desc">
-                      <%= guide.description.html_safe %>
+                      <%#= guide.description.html_safe %>
                     </div>
                     <p>
-                      <%= link_to "View More", guide_home_path(guide), :class => "btn btn-sm btn-primary" %>
+                      <%#= link_to "View More", guide_home_path(guide), :class => "btn btn-sm btn-primary" %>
                     </p>
                   </div>
                 </div>
                 <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 img-buying">
-                  <%= image_tag guide.image.url(:thumb),:style => "width:700px;height:260px" %>
+                  <%#= image_tag guide.image.url(:thumb),:style => "width:700px;height:260px" %>
                 </div>
               </div>
             </div>
-          <% end %>
+          <%# end %>
         </div>
       </div> 
-    <% end %>
+    <%# end %>
+-->
 
     <div class="box-featured box-features">
       <h1><span>Amazing Features</span></h1>
