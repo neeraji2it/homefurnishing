@@ -152,24 +152,26 @@
       </div>
     <% end %>
 
-    <% if @advices.present? %>
+<!--
+    <%# if @advices.present? %>
       <div class="box-featured">
         <h1><span>Inspiration & Advices</span></h1>
         <div class="bxslider">
-          <% @advices.each do |advice| %>
+          <%# @advices.each do |advice| %>
             <div class="box-bedsheeT">
               <div class="box-bedsheetimg">
-                <%= link_to image_tag(advice.avatar.present? ? (advice.avatar.url) : "/assets/missing.png", :style => "width:475px;height:250px"), inspirations_home_path(advice.id)%>
+                <%#= link_to image_tag(advice.avatar.present? ? (advice.avatar.url) : "/assets/missing.png", :style => "width:475px;height:250px"), inspirations_home_path(advice.id)%>
               </div>
               <div class="box-content">
-                <p><%= advice.title.titleize.truncate(20) %></p>
-                <p><%= link_to "View More", inspirations_home_path(advice.id), :class => "btn btn-sm btn-primary"%></p>
+                <p><%#= advice.title.titleize.truncate(20) %></p>
+                <p><%#= link_to "View More", inspirations_home_path(advice.id), :class => "btn btn-sm btn-primary"%></p>
               </div>
             </div>
-          <% end %>
+          <%# end %>
         </div>
       </div>
-    <% end %>
+    <%# end %>
+-->
 
 <!--
     <%# if @guides.present? %>
