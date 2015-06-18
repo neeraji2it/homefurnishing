@@ -205,11 +205,28 @@ opacity:1;
 }
 input[type="submit"].btn-search { background: url(/assets/images/sprit-icon-right.png) no-repeat right 12px; height: 38px; width: 20px; position: absolute; right: 1px; }
 input[type="text"].input-search {  border: 1px solid #ccc;
-    border-radius: 0;
-    height: 27px;
-    line-height: normal;
-   /* padding: 0 34px 8px 11px;*/
-    width: 51.6%; }
+border-radius: 0;
+height: 27px;
+color:#000;
+font-size:15px;
+width: 51.6%;
+padding: 0 5px;
+
+ }
+ input[type="text"].input-search::-webkit-input-placeholder {
+    color: #ccc;
+}
+input[type="text"].input-search:-moz-placeholder {
+   
+    color: #ccc;
+}
+input[type="text"].input-search::-moz-placeholder {
+    
+    color: #ccc;
+}
+input[type="text"].input-search:-ms-input-placeholder {
+    color: #ccc;
+}
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 input[type="text"].input-search { padding: 7px 34px 7px 11px; }
 }
@@ -373,7 +390,7 @@ html body .box-twenty h3 { font-family: 'OpenSansBold'; font-weight: bolder; }
 .carousel-product { float: left; width: 100%; }
 #myCarousel1 .left.carousel-control { left: 4px; }
 .box-circle { width: 228px; }
-.box-product { padding: 17px 5px 25px 0px; }
+.box-product { padding: 17px 0 25px 0px; }
 .box-content { text-align: center; padding: 8px 0 13px; border: 1px solid #e5e5e5; background-color: #f3f3f3; }
 .box-content h3 { color: #545454; font-size: 14px; padding-bottom: 0px; font-family: "Open Sans Extrabold"; font-weight: normal; }
 .circlE a { width: 35px; height: 35px; display: block; margin: 0 auto; border-radius: 20px; border: 1px solid #e3e3e3; background: url(/assets/images/sprit-icon.png) no-repeat 9px -1156px #f7f7f7; background: url(/assets/images/sprit-icon.png) no-repeat 9px -1156px, -moz-linear-gradient(top, #f9f9f9 0%, #f7f7f7 75%, #f1f1f1 90%, #eaeaea 100%); background: url(/assets/images/sprit-icon.png) no-repeat -13px -1156px, -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9f9f9), color-stop(75%, #f7f7f7), color-stop(90%, #f1f1f1), color-stop(100%, #eaeaea)); background: url(/assets/images/sprit-icon.png) no-repeat -13px -1156px, -webkit-linear-gradient(top, #f9f9f9 0%, #f7f7f7 75%, #f1f1f1 90%, #eaeaea 100%); background: url(/assets/images/sprit-icon.png) no-repeat -13px -1156px, -o-linear-gradient(top, #f9f9f9 0%, #f7f7f7 75%, #f1f1f1 90%, #eaeaea 100%); background: url(/assets/images/sprit-icon.png) no-repeat -13px -1156px, -ms-linear-gradient(top, #f9f9f9 0%, #f7f7f7 75%, #f1f1f1 90%, #eaeaea 100%); background: url(/assets/images/sprit-icon.png) no-repeat -13px -1156px, linear-gradient(to bottom, #f9f9f9 0%, #f7f7f7 75%, #f1f1f1 90%, #eaeaea 100%); }
@@ -591,7 +608,7 @@ html body .frow-image > div + div { margin-left: 110px; }
 .product-outer-box [class*="col-"]:hover .box-content { box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2); }
 .product-outer-box [class*="col-"]:hover .box-content { background-color: #fff; }
 .product-outer-box [class*="col-"]:hover .productimg-hover { -ms-transform: scale(1); -webkit-transform: scale(1); transform: scale(1); -moz-opacity: 1; -khtml-opacity: 1; opacity: 1; }
-.productimg-hover { -ms-transform: scale(0); -webkit-transform: scale(0); transform: scale(0); -moz-opacity: 0; -khtml-opacity: 0; opacity: 0; -webkit-transition: all 0.5s ease-out; -moz-transition: all 0.5s ease-out; transition: all 0.5s ease-out; background-color: rgba(255,255,255,0.8); position: absolute; top: 25%; left: 25%; padding: 20px; }
+.productimg-hover { -ms-transform: scale(0); -webkit-transform: scale(0); transform: scale(0); -moz-opacity: 0; -khtml-opacity: 0; opacity: 0; -webkit-transition: all 0.5s ease-out; -moz-transition: all 0.5s ease-out; transition: all 0.5s ease-out; background-color: rgba(255,255,255,0.8); position: absolute; top: 38%; left: 38%; padding: 20px; }
 .productimg-hover ul { list-style: none; padding: 0px; margin: 0px; }
 .productimg-hover ul li { float: left; margin-right: 1px; }
 .productimg-hover ul li a { float: left; width: 34px; height: 34px; display: block; background: url(/assets/images/sprit-icon.png) no-repeat center -1120px rgba(29,29,29,0.5); }
