@@ -1,1 +1,51 @@
-this is admin offer page
+<%= form_for @offer_go, :url => offer_go_admin_offer_managers_path, :method => 'PUT' do |f| %>
+  <%= f.text_area :go_text %> <br/>
+  <%= f.text_field :go_percent %> <br/>
+  <%= f.select :go_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+  <%= f.submit "Offer Go" %>
+<% end %>
+
+<br/><br/>
+<%= form_for @offer_first, :url => offer_first_admin_offer_managers_path, :method => 'PUT' do |f| %>
+  <%= f.text_area :content %> <br/>
+  <%= f.text_field :percent %> <br/>
+  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+  <%= f.submit "Collection First" %>
+<% end %>
+<br/><br/>
+
+
+<%= form_for @offer_second, :url => offer_second_admin_offer_managers_path, :method => 'PUT' do |f| %>
+  <%= f.text_area :content %> <br/>
+  <%= f.text_field :percent %> <br/>
+  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+  <%= f.text_area :additional %><br/>
+  <%= f.submit "Collection Second" %>
+<% end %>
+<br/><br/>
+
+<%= form_for @offer_third, :url => offer_third_admin_offer_managers_path, :method => 'PUT' do |f| %>
+  <%= f.text_area :content %> <br/>
+  <%= f.text_field :percent %> <br/>
+  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+  <%= f.text_area :additional %><br/>
+  <%= f.submit "Collection Third" %>
+<% end %>
+<br/><br/>
+
+<%= form_for @offer_fourth, :url => offer_fourth_admin_offer_managers_path, :method => 'PUT' do |f| %>
+  <%= f.text_area :content %> <br/>
+  <%= f.text_field :percent %> <br/>
+  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+  <%= f.text_area :additional %><br/>
+  <%= f.submit "Collection Fourth" %>
+<% end %>
+<br/><br/>
+
+<%= form_for @offer_fifth, :url => offer_fifth_admin_offer_managers_path, :method => 'PUT' do |f| %>
+  <%= f.text_area :content %> <br/>
+  <%= f.text_field :percent %> <br/>
+  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+  <%= f.text_area :additional %><br/>
+  <%= f.submit "Collection Fifth" %>
+<% end %>

@@ -4,7 +4,7 @@ Furnitureapp::Application.routes.draw do
   devise_for :users, :controllers => {:sessions => "sessions"}
   namespace :admin do
     resources :offer_managers do 
-      member do 
+      collection do 
         put :offer_go
         put :offer_first
         put :offer_second
