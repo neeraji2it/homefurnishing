@@ -96,6 +96,13 @@
           <li class="<%= (params[:controller] == "admin/guides" && params[:action] == "index" || params[:action] == "new" || params[:action == "edit"]) ? 'active' : '' %>">
             <a href="/admin/guides">Guides</a>
           </li>
+          <% elsif params[:controller] == "admin/offer_managers" %>
+          <li>
+            <a href="/admin/dashboards"><img src="/assets/admin/images/icons/black/16/home.png" alt="Home" />Dashboard</a>
+          </li>
+          <li class="<%= (params[:controller] == "admin/offer_managers" && params[:action] == "index") ? 'active' : '' %>">
+            <a href="/admin/offer_managers">Offer Manager</a>
+          </li>
         <% end %>        
       </ul>
     </div>
