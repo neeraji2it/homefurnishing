@@ -1,78 +1,212 @@
-<%= form_for @offer_go, :url => offer_go_admin_offer_managers_path, :method => 'PUT' do |f| %>
-  <%= f.text_area :go_text %> <br/>
-  <%= f.text_field :go_percent %> <br/>
-  <%= f.select :go_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-  <%= f.submit "Offer Go" %>
-<% end %>
+<!-- Content Area -->
+<div id="da-content-area">
+  <div class="grid_2">
+    <div class="da-panel">
+      <div class="da-panel-header">
+        <span class="da-panel-title">
+          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+          Content Manager for Collection && Offer
+        </span>
+      </div>
+      <div class="da-panel-content">
+        <%= form_for @offer_go, :url => offer_go_admin_offer_managers_path, :method => 'PUT' do |f| %>
+          <%= f.text_area :go_text %> <br/>
+          <%= f.text_field :go_percent %> <br/>
+          <%= f.select :go_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+          <%= f.submit "Offer Go" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<br/><br/>
-<%= form_for @offer_first, :url => offer_first_admin_offer_managers_path, :method => 'PUT' do |f| %>
-  <%= f.text_area :content %> <br/>
-  <%= f.text_field :percent %> <br/>
-  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-  <%= f.submit "Collection First" %>
-<% end %>
-<br/><br/>
+<!-- Content Area -->
+<div id="da-content-area">
+  <div class="grid_2">
+    <div class="da-panel">
+      <div class="da-panel-header">
+        <span class="da-panel-title">
+          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+          Content Manager for Collection && Offer
+        </span>
+      </div>
+      <div class="da-panel-content">
+        <%= form_for @offer_first, :url => offer_first_admin_offer_managers_path, :method => 'PUT' do |f| %>
+          <%= f.text_area :content %> <br/>
+          <%= f.text_field :percent %> <br/>
+          <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+          <%= f.submit "Collection First" %>
+        <% end %> 
+      </div>
+    </div>
+  </div>
+
+  <div class="grid_2">
+    <div class="da-panel">
+      <div class="da-panel-header">
+        <span class="da-panel-title">
+          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+          Content Manager for Collection && Offer
+        </span>
+      </div>
+      <div class="da-panel-content">
+        <%= form_for @offer_second, :url => offer_second_admin_offer_managers_path, :method => 'PUT' do |f| %>
+          <%= f.text_area :content %> <br/>
+          <%= f.text_field :percent %> <br/>
+          <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+          <%= f.text_area :additional %><br/>
+          <%= f.submit "Collection Second" %>
+        <% end %> 
+      </div>
+    </div>
+  </div>
+</div>
 
 
-<%= form_for @offer_second, :url => offer_second_admin_offer_managers_path, :method => 'PUT' do |f| %>
-  <%= f.text_area :content %> <br/>
-  <%= f.text_field :percent %> <br/>
-  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-  <%= f.text_area :additional %><br/>
-  <%= f.submit "Collection Second" %>
-<% end %>
-<br/><br/>
 
-<%= form_for @offer_third, :url => offer_third_admin_offer_managers_path, :method => 'PUT' do |f| %>
-  <%= f.text_area :content %> <br/>
-  <%= f.text_field :percent %> <br/>
-  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-  <%= f.text_area :additional %><br/>
-  <%= f.submit "Collection Third" %>
-<% end %>
-<br/><br/>
 
-<%= form_for @offer_fourth, :url => offer_fourth_admin_offer_managers_path, :method => 'PUT' do |f| %>
-  <%= f.text_area :content %> <br/>
-  <%= f.text_field :percent %> <br/>
-  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-  <%= f.text_area :additional %><br/>
-  <%= f.submit "Collection Fourth" %>
-<% end %>
-<br/><br/>
 
-<%= form_for @offer_fifth, :url => offer_fifth_admin_offer_managers_path, :method => 'PUT' do |f| %>
-  <%= f.text_area :content %> <br/>
-  <%= f.text_field :percent %> <br/>
-  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-  <%= f.text_area :additional %><br/>
-  <%= f.submit "Collection Fifth" %>
-<% end %>
-<br/><br/>
+<!-- Content Area -->
+<div id="da-content-area">
+  <div class="grid_2">
+    <div class="da-panel">
+      <div class="da-panel-header">
+        <span class="da-panel-title">
+          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+          Content Manager for Collection && Offer
+        </span>
+      </div>
+      <div class="da-panel-content">
+        <%= form_for @offer_third, :url => offer_third_admin_offer_managers_path, :method => 'PUT' do |f| %>
+          <%= f.text_area :content %> <br/>
+          <%= f.text_field :percent %> <br/>
+          <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+          <%= f.text_area :additional %><br/>
+          <%= f.submit "Collection Third" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
-<%= form_for @offer_sixth, :url => offer_sixth_admin_offer_managers_path, :method => 'PUT' do |f| %>
-  <%= f.text_area :content %> <br/>
-  <%= f.text_field :percent %> <br/>
-  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-  <%= f.text_area :additional %><br/>
-  <%= f.submit "Collection Sixth" %>
-<% end %>
-<br/><br/>
+  <div class="grid_2">
+    <div class="da-panel">
+      <div class="da-panel-header">
+        <span class="da-panel-title">
+          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+          Content Manager for Collection && Offer
+        </span>
+      </div>
+      <div class="da-panel-content">
+       <%= form_for @offer_fourth, :url => offer_fourth_admin_offer_managers_path, :method => 'PUT' do |f| %>
+         <%= f.text_area :content %> <br/>
+         <%= f.text_field :percent %> <br/>
+         <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+         <%= f.text_area :additional %><br/>
+         <%= f.submit "Collection Fourth" %>
+       <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= form_for @offer_seventh, :url => offer_seventh_admin_offer_managers_path, :method => 'PUT' do |f| %>
-  <%= f.text_area :content %> <br/>
-  <%= f.text_field :percent %> <br/>
-  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-  <%= f.text_area :additional %><br/>
-  <%= f.submit "Collection Seventh" %>
-<% end %>
-<br/><br/>
 
-<%= form_for @offer_eighth, :url => offer_eighth_admin_offer_managers_path, :method => 'PUT' do |f| %>
-  <%= f.text_area :content %> <br/>
-  <%= f.text_field :percent %> <br/>
-  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-  <%= f.text_area :additional %><br/>
-  <%= f.submit "Collection Eighth" %>
-<% end %>
+
+
+
+
+
+
+
+
+
+<!-- Content Area -->
+<div id="da-content-area">
+  <div class="grid_2">
+    <div class="da-panel">
+      <div class="da-panel-header">
+        <span class="da-panel-title">
+          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+          Content Manager for Collection && Offer
+        </span>
+      </div>
+      <div class="da-panel-content">
+       <%= form_for @offer_fifth, :url => offer_fifth_admin_offer_managers_path, :method => 'PUT' do |f| %>
+         <%= f.text_area :content %> <br/>
+         <%= f.text_field :percent %> <br/>
+         <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+         <%= f.text_area :additional %><br/>
+         <%= f.submit "Collection Fifth" %>
+       <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid_2">
+    <div class="da-panel">
+      <div class="da-panel-header">
+        <span class="da-panel-title">
+          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+          Content Manager for Collection && Offer
+        </span>
+      </div>
+      <div class="da-panel-content">
+        <%= form_for @offer_sixth, :url => offer_sixth_admin_offer_managers_path, :method => 'PUT' do |f| %>
+          <%= f.text_area :content %> <br/>
+          <%= f.text_field :percent %> <br/>
+          <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+          <%= f.text_area :additional %><br/>
+          <%= f.submit "Collection Sixth" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Content Area -->
+<div id="da-content-area">
+  <div class="grid_2">
+    <div class="da-panel">
+      <div class="da-panel-header">
+        <span class="da-panel-title">
+          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+          Content Manager for Collection && Offer
+        </span>
+      </div>
+      <div class="da-panel-content">
+       <%= form_for @offer_seventh, :url => offer_seventh_admin_offer_managers_path, :method => 'PUT' do |f| %>
+         <%= f.text_area :content %> <br/>
+         <%= f.text_field :percent %> <br/>
+         <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+         <%= f.text_area :additional %><br/>
+         <%= f.submit "Collection Seventh" %>
+       <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid_2">
+    <div class="da-panel">
+      <div class="da-panel-header">
+        <span class="da-panel-title">
+          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+          Content Manager for Collection && Offer
+        </span>
+      </div>
+      <div class="da-panel-content">
+        <%= form_for @offer_eighth, :url => offer_eighth_admin_offer_managers_path, :method => 'PUT' do |f| %>
+          <%= f.text_area :content %> <br/>
+          <%= f.text_field :percent %> <br/>
+          <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+          <%= f.text_area :additional %><br/>
+          <%= f.submit "Collection Eighth" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
