@@ -3,16 +3,14 @@
     <div class="container">
       <div class="box-category">
         <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="box-product col-xs-12 col-sm-9 col-md-9 col-lg-9">
-              <img id="zoom_09" src="<%= @product.images.present? ? (@product.images.first.avatar.url(:small)) : "/assets/missing.png" %>" data-zoom-image="<%= @product.images.present? ? (@product.images.first.avatar.url(:small)) : "/assets/missing.png" %>" />
-            </div>
+          <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8  margn-tp">
+
 
             <% if @images.present? && @images.size > 1 %>
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" id="gallery_09">
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 margn-tp" id="gallery_09">
               <div class="slid" style="position: relative; ">
 
-              <div class="row">
+                <div class="row">
                   <div class="bxslider1" style="max-width:300px;max-height:230px;">
                     <% @images.each do |image| %>
                     <div class="col-xs-3 col-sm-12 col-md-12 col-lg-12 box-product add_small_img">
@@ -23,13 +21,15 @@
                     <% end %>
                   </div>
                 </div>
-
               </div>
             </div>
             <% end %>
+            <div class="box-product col-xs-12 col-sm-9 col-md-9 col-lg-9 ">
+              <img id="zoom_09"  src="<%= @product.images.present? ? (@product.images.first.avatar.url(:small)) : "/assets/missing.png" %>" data-zoom-image="<%= @product.images.present? ? (@product.images.first.avatar.url(:small)) : "/assets/missing.png" %>" />
+            </div>
           </div>
 
-          <div class="list_price col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="list_price col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="box-rightcategory">
               <div class="box-producT">
                 <span><%= link_to "Back to Category", @product.sub_category.present? ? home_path(@product.sub_category.id) : home_path(@product.category.id, :param1 => 'parent') %></span>
@@ -173,6 +173,8 @@
         });
       });
     </script>
-      <style>
+    <style>
       .bx-wrapper .bx-controls-direction a{z-index: 0;}
-      </style>
+      .margn-tp{ margin-top: 20px;}
+      
+    </style>
