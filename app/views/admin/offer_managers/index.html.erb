@@ -38,49 +38,49 @@
       </div>
     </div>
   </div>
+
+  <div class="grid_2">
+      <div class="da-panel">
+        <div class="da-panel-header">
+          <span class="da-panel-title">
+            <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+            Content Manager for Collection First
+          </span>
+        </div>
+        <div class="da-panel-content">
+          <%= form_for @offer_first, :url => offer_first_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
+            <div class="da-form-row">
+              <label><%= f.label :content %></label>
+              <div class="da-form-item large"> 
+                <%= f.text_area :content, class: "form-control ckeditor" %>
+              </div>
+            </div>
+
+            <div class="da-form-row">
+              <label><%= f.label :percent %></label>
+              <div class="da-form-item large">
+                <%= f.text_field :percent, class: "form-control" %>
+              </div>
+            </div>
+
+            <div class="da-form-row">
+              <label><%= f.label :offer_parent %></label>
+              <div class="da-form-item large">
+                <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+              </div>
+            </div>
+
+            <div class="da-button-row">
+              <%= f.submit "Collection First", class: "da-button blue left" %>
+            </div>
+          <% end %> 
+        </div>
+      </div>
+    </div>
 </div>
 
 <!-- Content Area -->
 <div id="da-content-area">
-  <div class="grid_2">
-    <div class="da-panel">
-      <div class="da-panel-header">
-        <span class="da-panel-title">
-          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
-          Content Manager for Collection First
-        </span>
-      </div>
-      <div class="da-panel-content">
-        <%= form_for @offer_first, :url => offer_first_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
-          <div class="da-form-row">
-            <label><%= f.label :content %></label>
-            <div class="da-form-item large"> 
-              <%= f.text_area :content, class: "form-control ckeditor" %>
-            </div>
-          </div>
-
-          <div class="da-form-row">
-            <label><%= f.label :percent %></label>
-            <div class="da-form-item large">
-              <%= f.text_field :percent, class: "form-control" %>
-            </div>
-          </div>
-
-          <div class="da-form-row">
-            <label><%= f.label :offer_parent %></label>
-            <div class="da-form-item large">
-              <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-            </div>
-          </div>
-
-          <div class="da-button-row">
-            <%= f.submit "Collection First", class: "da-button blue left" %>
-          </div>
-        <% end %> 
-      </div>
-    </div>
-  </div>
-
   <div class="grid_2">
     <div class="da-panel">
       <div class="da-panel-header">
@@ -91,15 +91,87 @@
       </div>
       <div class="da-panel-content">
         <%= form_for @offer_second, :url => offer_second_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
-          <%= f.text_area :content %> <br/>
-          <%= f.text_field :percent %> <br/>
-          <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-          <%= f.text_area :additional %><br/>
-          <%= f.submit "Collection Second" %>
+        <div class="da-form-row">
+          <label></label>
+          <div class="da-form-item large"> 
+          <%= f.text_area :content, class: "form-control ckeditor" %> <br/>    
+          </div>
+        </div>
+
+        <div class="da-form-row">
+          <label></label>
+          <div class="da-form-item large"> 
+          <%= f.text_field :percent, class: "form-control" %> <br/>  
+          </div>
+        </div>
+
+        <div class="da-form-row">
+          <label></label>
+          <div class="da-form-item large"> 
+          <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>  
+          </div>
+        </div>
+
+        <div class="da-form-row">
+          <label></label>
+          <div class="da-form-item large"> 
+           <%= f.text_area :additional, class: "form-control ckeditor" %><br/>
+          </div>
+        </div>
+
+        <div class="da-button-row">
+          <%= f.submit "Collection Second", class: "da-button blue left" %>
+        </div>
         <% end %> 
       </div>
-    </div>
+    </div>  
   </div>
+
+  <div class="grid_2">
+      <div class="da-panel">
+        <div class="da-panel-header">
+          <span class="da-panel-title">
+            <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+            Content Manager for Collection Third
+          </span>
+        </div>
+        <div class="da-panel-content">
+          <%= form_for @offer_third, :url => offer_third_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
+            <div class="da-form-row">
+              <label></label>
+              <div class="da-form-item large"> 
+              <%= f.text_area :content, class: "form-control ckeditor" %> <br/>    
+              </div>
+            </div>
+
+            <div class="da-form-row">
+              <label></label>
+              <div class="da-form-item large"> 
+              <%= f.text_field :percent, class: "form-control" %> <br/>  
+              </div>
+            </div>
+
+            <div class="da-form-row">
+              <label></label>
+              <div class="da-form-item large"> 
+              <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>  
+              </div>
+            </div>
+
+            <div class="da-form-row">
+              <label></label>
+              <div class="da-form-item large"> 
+               <%= f.text_area :additional, class: "form-control ckeditor" %><br/>
+              </div>
+            </div>
+
+            <div class="da-button-row">
+              <%= f.submit "Collection Third", class: "da-button blue left" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
 </div>
 
 <!-- Content Area -->
@@ -109,80 +181,89 @@
       <div class="da-panel-header">
         <span class="da-panel-title">
           <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
-          Content Manager for Collection && Offer
-        </span>
-      </div>
-      <div class="da-panel-content">
-        <%= form_for @offer_third, :url => offer_third_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
-          <%= f.text_area :content %> <br/>
-          <%= f.text_field :percent %> <br/>
-          <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-          <%= f.text_area :additional %><br/>
-          <%= f.submit "Collection Third" %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid_2">
-    <div class="da-panel">
-      <div class="da-panel-header">
-        <span class="da-panel-title">
-          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
-          Content Manager for Collection && Offer
+          Content Manager for Collection Fourth
         </span>
       </div>
       <div class="da-panel-content">
        <%= form_for @offer_fourth, :url => offer_fourth_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
-         <%= f.text_area :content %> <br/>
-         <%= f.text_field :percent %> <br/>
-         <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-         <%= f.text_area :additional %><br/>
-         <%= f.submit "Collection Fourth" %>
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+           <%= f.text_area :content, class: "form-control ckeditor" %> <br/>    
+           </div>
+         </div>
+
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+           <%= f.text_field :percent, class: "form-control" %> <br/>  
+           </div>
+         </div>
+
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+           <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>  
+           </div>
+         </div>
+
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+            <%= f.text_area :additional, class: "form-control ckeditor" %><br/>
+           </div>
+         </div>
+
+         <div class="da-button-row">
+           <%= f.submit "Collection Fourth", class: "da-button blue left" %>
+         </div>
        <% end %>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Content Area -->
-<div id="da-content-area">
   <div class="grid_2">
     <div class="da-panel">
       <div class="da-panel-header">
         <span class="da-panel-title">
           <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
-          Content Manager for Collection && Offer
+          Content Manager for Collection Fifth
         </span>
       </div>
       <div class="da-panel-content">
        <%= form_for @offer_fifth, :url => offer_fifth_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
-         <%= f.text_area :content %> <br/>
-         <%= f.text_field :percent %> <br/>
-         <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-         <%= f.text_area :additional %><br/>
-         <%= f.submit "Collection Fifth" %>
-       <% end %>
-      </div>
-    </div>
-  </div>
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+           <%= f.text_area :content, class: "form-control ckeditor" %> <br/>    
+           </div>
+         </div>
 
-  <div class="grid_2">
-    <div class="da-panel">
-      <div class="da-panel-header">
-        <span class="da-panel-title">
-          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
-          Content Manager for Collection && Offer
-        </span>
-      </div>
-      <div class="da-panel-content">
-        <%= form_for @offer_sixth, :url => offer_sixth_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
-          <%= f.text_area :content %> <br/>
-          <%= f.text_field :percent %> <br/>
-          <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-          <%= f.text_area :additional %><br/>
-          <%= f.submit "Collection Sixth" %>
-        <% end %>
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+           <%= f.text_field :percent, class: "form-control" %> <br/>  
+           </div>
+         </div>
+
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+           <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>  
+           </div>
+         </div>
+
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+            <%= f.text_area :additional, class: "form-control ckeditor" %><br/>
+           </div>
+         </div>
+
+         <div class="da-button-row">
+           <%= f.submit "Collection Fifth", class: "da-button blue left" %>
+         </div>
+       <% end %>
       </div>
     </div>
   </div>
@@ -195,17 +276,43 @@
       <div class="da-panel-header">
         <span class="da-panel-title">
           <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
-          Content Manager for Collection && Offer
+          Content Manager for Collection Sixth
         </span>
       </div>
       <div class="da-panel-content">
-       <%= form_for @offer_seventh, :url => offer_seventh_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
-         <%= f.text_area :content %> <br/>
-         <%= f.text_field :percent %> <br/>
-         <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-         <%= f.text_area :additional %><br/>
-         <%= f.submit "Collection Seventh" %>
-       <% end %>
+        <%= form_for @offer_sixth, :url => offer_sixth_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
+          <div class="da-form-row">
+            <label></label>
+            <div class="da-form-item large"> 
+            <%= f.text_area :content, class: "form-control ckeditor" %> <br/>    
+            </div>
+          </div>
+
+          <div class="da-form-row">
+            <label></label>
+            <div class="da-form-item large"> 
+            <%= f.text_field :percent, class: "form-control" %> <br/>  
+            </div>
+          </div>
+
+          <div class="da-form-row">
+            <label></label>
+            <div class="da-form-item large"> 
+            <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>  
+            </div>
+          </div>
+
+          <div class="da-form-row">
+            <label></label>
+            <div class="da-form-item large"> 
+             <%= f.text_area :additional, class: "form-control ckeditor" %><br/>
+            </div>
+          </div>
+
+          <div class="da-button-row">
+            <%= f.submit "Collection Sixth", class: "da-button blue left" %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -215,16 +322,91 @@
       <div class="da-panel-header">
         <span class="da-panel-title">
           <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
-          Content Manager for Collection && Offer
+          Content Manager for Collection Seventh
+        </span>
+      </div>
+      <div class="da-panel-content">
+       <%= form_for @offer_seventh, :url => offer_seventh_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+           <%= f.text_area :content, class: "form-control ckeditor" %> <br/>    
+           </div>
+         </div>
+
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+           <%= f.text_field :percent, class: "form-control" %> <br/>  
+           </div>
+         </div>
+
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+           <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>  
+           </div>
+         </div>
+
+         <div class="da-form-row">
+           <label></label>
+           <div class="da-form-item large"> 
+            <%= f.text_area :additional, class: "form-control ckeditor" %><br/>
+           </div>
+         </div>
+
+         <div class="da-button-row">
+           <%= f.submit "Collection Seventh", class: "da-button blue left" %>
+         </div>
+       <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Content Area -->
+<div id="da-content-area">
+  <div class="grid_2">
+    <div class="da-panel">
+      <div class="da-panel-header">
+        <span class="da-panel-title">
+          <img src="/assets/admin/images/icons/black/16/pencil.png" alt="" />
+          Content Manager for Collection Eighth
         </span>
       </div>
       <div class="da-panel-content">
         <%= form_for @offer_eighth, :url => offer_eighth_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
-          <%= f.text_area :content %> <br/>
-          <%= f.text_field :percent %> <br/>
-          <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
-          <%= f.text_area :additional %><br/>
-          <%= f.submit "Collection Eighth" %>
+          <div class="da-form-row">
+            <label></label>
+            <div class="da-form-item large"> 
+            <%= f.text_area :content, class: "form-control ckeditor" %> <br/>    
+            </div>
+          </div>
+
+          <div class="da-form-row">
+            <label></label>
+            <div class="da-form-item large"> 
+            <%= f.text_field :percent, class: "form-control" %> <br/>  
+            </div>
+          </div>
+
+          <div class="da-form-row">
+            <label></label>
+            <div class="da-form-item large"> 
+            <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>  
+            </div>
+          </div>
+
+          <div class="da-form-row">
+            <label></label>
+            <div class="da-form-item large"> 
+             <%= f.text_area :additional, class: "form-control ckeditor" %><br/>
+            </div>
+          </div>
+
+          <div class="da-button-row">
+            <%= f.submit "Collection Eighth", class: "da-button blue left" %>
+          </div>
         <% end %>
       </div>
     </div>
