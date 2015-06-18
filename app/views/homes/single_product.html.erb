@@ -6,8 +6,8 @@
           <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8  margn-tp">
 
 
-            <div class="box-product col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" width:450px">
-              <img id="zoom_09" src="<%= @product.images.present? ? (@product.images.first.avatar.url(:original)) : "/assets/missing.png" %>" data-zoom-image="<%= @product.images.present? ? (@product.images.first.avatar.url(:small)) : "/assets/missing.png" %>" />
+            <div class="box-product col-xs-12 col-sm-12 col-md-12 col-lg-12" style=" width:550px">
+              <img id="zoom_09" style="width:100%" src="<%= @product.images.present? ? (@product.images.first.avatar.url) : "/assets/missing.png" %>" data-zoom-image="<%= @product.images.present? ? (@product.images.first.avatar.url(:small)) : "/assets/missing.png" %>" />
 
             </div>
 
