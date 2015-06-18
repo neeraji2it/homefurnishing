@@ -59,6 +59,33 @@ class Admin::OfferManagersController < ApplicationController
     end
   end
 
+  def offer_sixth
+    if @offer_sixth.update_attributes(offer_sixth_params)
+      redirect_to admin_offer_managers_path
+      flash[:notice] = "Collection-sixth content are updated!"
+    else
+      render 'index'
+    end
+  end
+
+  def offer_seventh
+    if @offer_seventh.update_attributes(offer_seventh_params)
+      redirect_to admin_offer_managers_path
+      flash[:notice] = "Collection-seventh content are updated!"
+    else
+      render 'index'
+    end
+  end
+
+  def offer_eighth
+    if @offer_eighth.update_attributes(offer_eighth_params)
+      redirect_to admin_offer_managers_path
+      flash[:notice] = "Collection-eighth content are updated!"
+    else
+      render 'index'
+    end
+  end
+
   private
   def offer_go_params
     params.require(:offer_collection).permit!
@@ -82,6 +109,18 @@ class Admin::OfferManagersController < ApplicationController
 
   def offer_fifth_params
     params.require(:collection_fifth).permit!
+  end
+
+  def offer_sixth_params
+    params.require(:collection_sixth).permit!
+  end
+
+  def offer_seventh_params
+    params.require(:collection_seventh).permit!
+  end
+
+  def offer_eighth_params
+    params.require(:collection_eighth).permit!
   end
 
   def load_all

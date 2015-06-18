@@ -49,3 +49,30 @@
   <%= f.text_area :additional %><br/>
   <%= f.submit "Collection Fifth" %>
 <% end %>
+<br/><br/>
+
+<%= form_for @offer_sixth, :url => offer_sixth_admin_offer_managers_path, :method => 'PUT' do |f| %>
+  <%= f.text_area :content %> <br/>
+  <%= f.text_field :percent %> <br/>
+  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+  <%= f.text_area :additional %><br/>
+  <%= f.submit "Collection Sixth" %>
+<% end %>
+<br/><br/>
+
+<%= form_for @offer_seventh, :url => offer_seventh_admin_offer_managers_path, :method => 'PUT' do |f| %>
+  <%= f.text_area :content %> <br/>
+  <%= f.text_field :percent %> <br/>
+  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+  <%= f.text_area :additional %><br/>
+  <%= f.submit "Collection Seventh" %>
+<% end %>
+<br/><br/>
+
+<%= form_for @offer_eighth, :url => offer_eighth_admin_offer_managers_path, :method => 'PUT' do |f| %>
+  <%= f.text_area :content %> <br/>
+  <%= f.text_field :percent %> <br/>
+  <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %><br/>
+  <%= f.text_area :additional %><br/>
+  <%= f.submit "Collection Eighth" %>
+<% end %>

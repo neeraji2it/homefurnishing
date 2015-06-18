@@ -11,6 +11,9 @@ Furnitureapp::Application.routes.draw do
         put :offer_third
         put :offer_fourth
         put :offer_fifth
+        put :offer_sixth
+        put :offer_seventh
+        put :offer_eighth
       end
     end
 
