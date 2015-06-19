@@ -4,6 +4,7 @@ class HomesController < ApplicationController
     @advices = Advice.visible
     @banner_images = Banner.visible
     @guides = BuyingGuide.visible
+    offer_collections
   end
 
   def index_test
@@ -103,11 +104,23 @@ def load_image
 end
 
 private
-def product_params
-  params.require(:product).permit!
-end
+  def product_params
+    params.require(:product).permit!
+  end
 
-def news_letter_params
-  params.require(:news_letter).permit!
-end
+  def news_letter_params
+    params.require(:news_letter).permit!
+  end
+
+  def offer_collections
+    @offer_go = OfferCollection.first
+    @offer_first = CollectionFirst.first
+    @offer_second = CollectionSecond.first
+    @offer_third = CollectionThird.first
+    @offer_fourth = CollectionFourth.first
+    @offer_fifth = CollectionFifth.first
+    @offer_sixth = CollectionSixth.first
+    @offer_seventh = CollectionSeventh.first
+    @offer_eighth = CollectionEighth.first
+  end
 end
