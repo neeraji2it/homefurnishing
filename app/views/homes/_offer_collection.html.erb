@@ -89,27 +89,33 @@
       <% end %>
 
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <div class="box-mainbed"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-collection3.png"/></a>
+      <% if(@offer_sixth.content.present? && @offer_sixth.percent.present? && @offer_sixth.offer_parent.present?)%>
+        <div class="box-mainbed">
+          <%= link_to @offer_sixth.image.present? ? image_tag(@offer_sixth.image.url) : image_tag("/assets/images/img-collection3.png"), offers_homes_path(:param1 => @offer_sixth.offer_parent, :param2 => @offer_sixth.percent) %>
           <div class="box-thirty box-uptothirty">
-            <p class="bottom-spacE">up to</p>
-            <h6>10<span><em>%</em> off</span></h6>
+            <%= @offer_sixth.content.html_safe %>
           </div>
           <div class="box-miss">
-            <p>Show piece offers</p>
-            <p>Exclusive offers for a limited time only</p>
+            <%= @offer_sixth.additional.html_safe %>
           </div>
         </div>
+      <% end %>
 
-        <div class="box-bath"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-bath.png"/></a>
+      <% if(@offer_eighth.content.present? && @offer_eighth.percent.present? && @offer_eighth.offer_parent.present?)%>
+        <div class="box-bath"> 
+          <%= link_to @offer_eighth.image.present? ? image_tag(@offer_eighth.image.url) : image_tag("/assets/images/img-bath.png"), offers_homes_path(:param1 => @offer_eighth.offer_parent, :param2 => @offer_eighth.percent) %>
           <div class="box-thirty">
-            <h6>30<span><em>%</em> off</span></h6>
-            <p>selected</p>
+            <%= @offer_eighth.content.html_safe %>
+            <!-- <h6>30<span><em>%</em> off</span></h6>
+            <p>selected</p> -->
           </div>
           <div class="box-miss">
-            <p>Bath accessories offers</p>
-            <p>Loreum ispum is a dummy text</p>
+            <%= @offer_eighth.additional.html_safe %>
+            <!-- <p>Bath accessories offers</p>
+            <p>Loreum ispum is a dummy text</p> -->
           </div>
         </div>
+      <% end %>
 
       </div>
     </div>
