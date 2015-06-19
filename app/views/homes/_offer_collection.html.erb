@@ -2,14 +2,19 @@
    <h1><span>Collections</span></h1> 
   <div class="row-collSec">
     <div class="row">
+      <% if(@offer_first.content.present? && @offer_first.percent.present? && @offer_first.offer_parent.present?)%>
       <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
         <div class="box-twenty">
-          <h3> 20 </h3>
-          <span><em>%</em>OFF</span>
+          <!-- <h3> 20 
+          <span><em>%</em>OFF</span> </h3>
           <p>100's of Furniture Products</p>
-          <p class="text-offer">Offers end midnight Wednesday</p>
-          <a href="#" title="Shop Now" class="btn btn-shop">Shop Now</a> </div>
+           <p class="text-offer">Offers end midnight Wednesday</p> -->
+          <div><%= @offer_first.content.html_safe %></div>
+          <%= link_to "Shop Now", offers_homes_path(:param1 => @offer_first.offer_parent, :param2 => @offer_first.percent), class: "btn btn-shop" %>
+        </div>
       </div>
+      <% end %>
+
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="box-upto">
           <div class="box-fifty">
@@ -32,6 +37,8 @@
         </div>
       </div>
     </div>
+
+
     <div class="row">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="box-mainbed"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-collection1.png"/></a>
