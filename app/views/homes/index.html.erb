@@ -21,17 +21,19 @@
 <% end%>
 
 <article>
-  <% if(@offer_go.go_text.present? && @offer_go.go_percent.present? && @offer_go.go_parent.present?) %>
-   <div class="box-whether">
-    <div class="container">
-      <div class="fright box-circel">
-        <div class="box-divider"></div>
-        <div class="circle"> <%= link_to "Go!", offers_homes_path(:param1 => @offer_go.go_parent, :param2 => @offer_go.go_percent) %> </div>
+<% if @offer_go.present? %>
+    <% if(@offer_go.go_text.present? && @offer_go.go_percent.present? && @offer_go.go_parent.present?) %>
+     <div class="box-whether">
+      <div class="container">
+        <div class="fright box-circel">
+          <div class="box-divider"></div>
+          <div class="circle"> <%= link_to "Go!", offers_homes_path(:param1 => @offer_go.go_parent, :param2 => @offer_go.go_percent) %> </div>
+        </div>
+        <p><%= @offer_go.go_text.html_safe %></p>
       </div>
-      <p><%= @offer_go.go_text.html_safe %></p>
-    </div>
-  </div> 
-  <% end %>
+    </div> 
+    <% end %>
+<% end %>
   
   <div class="container">
      <%= render :partial => 'offer_collection' %>
