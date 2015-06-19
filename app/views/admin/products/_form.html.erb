@@ -15,7 +15,7 @@
 <div class="da-form-row">
   <label>Choose Category</label>
   <div class="da-form-item large">
-    <%= f.select :category_id, options_for_select([["Select Category", ""]] + Category.all.map {|c| [c.name, c.id]}), {}, :id => "category_id" %>
+    <%= f.select :category_id, options_for_select([["Select Category", ""]] + Category.all.map {|c| [c.name, c.id]},:selected => f.object.category_id), {}, :id => "category_id" %>
   </div>
 </div>
 
