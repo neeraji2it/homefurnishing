@@ -16,15 +16,18 @@
       <% end %>
 
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <% if(@offer_second.content.present? && @offer_second.percent.present? && @offer_second.offer_parent.present?)%>
         <div class="box-upto">
           <div class="box-fifty">
-            <h2>Upto <strong>50%</strong> off selected offers</h2>
-            <a href="#" title="Shop Now" class="btn-shop">Shop Now</a> </div>
+            <%= @offer_second.content.html_safe %>
+            <%= link_to "Shop Now", offers_homes_path(:param1 => @offer_second.offer_parent, :param2 => @offer_second.percent), class: "btn-shop" %>
+          </div>
           <div class="box-miss">
-            <p>Miss it,miss out!</p>
-            <p>Exclusive offers for a limited time only</p>
+            <%= @offer_second.additional.html_safe %>
           </div>
         </div>
+      <% end %>
+  
         <div class="box-bath"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-bath.png"/></a>
           <div class="box-thirty">
             <h6>30<span><em>%</em> off</span></h6>
@@ -37,7 +40,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="row">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
