@@ -59,31 +59,34 @@
         </div>
       <% end %>
 
-        <div class="box-bath box-bath640"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-bath.png"/></a>
+      <% if(@offer_seventh.content.present? && @offer_seventh.percent.present? && @offer_seventh.offer_parent.present?)%>
+        <div class="box-bath box-bath640"> 
+        <!-- <a href="#" title=""><img alt="" title="" src="/assets/images/img-bath.png"/></a> -->
+          <%= link_to @offer_seventh.image.present? ? image_tag(@offer_seventh.image.url) : image_tag("/assets/images/img-bath.png"), offers_homes_path(:param1 => @offer_seventh.offer_parent, :param2 => @offer_seventh.percent) %>
           <div class="box-thirty">
-            <h6>30<span><em>%</em> off</span></h6>
-            <p>selected</p>
+            <%= @offer_seventh.content.html_safe %>
           </div>
           <div class="box-miss">
-            <p>Bath accessories offers</p>
-            <p>Loreum ispum is a dummy text</p>
-
+            <%= @offer_seventh.additional.html_safe %>
           </div>
         </div>
+      <% end %>
       </div>
 
+      <% if(@offer_fifth.content.present? && @offer_fifth.percent.present? && @offer_fifth.offer_parent.present?)%>
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <div class="box-mainbed box-collectionMiddil"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-collection2.png"/></a>
+        <div class="box-mainbed box-collectionMiddil">
+         <!-- <a href="#" title=""><img alt="" title="" src="/assets/images/img-collection2.png"/></a> -->
+          <%= link_to @offer_fifth.image.present? ? image_tag(@offer_fifth.image.url) : image_tag("/assets/images/img-collection2.png"), offers_homes_path(:param1 => @offer_fifth.offer_parent, :param2 => @offer_fifth.percent) %>
           <div class="box-thirty box-uptothirty">
-            <p class="bottom-spacE">up to</p>
-            <h6>20<span><em>%</em> off</span></h6>
+            <%= @offer_fifth.content.html_safe %>
           </div>
           <div class="box-miss">
-            <p>Home Decor</p>
-            <p>Loreum ispum is a dummy text</p>
+            <%= @offer_fifth.additional.html_safe %>
           </div>
         </div>
       </div>
+      <% end %>
 
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="box-mainbed"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-collection3.png"/></a>
