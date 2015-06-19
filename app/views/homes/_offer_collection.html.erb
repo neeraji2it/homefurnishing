@@ -28,32 +28,37 @@
         </div>
       <% end %>
   
-        <div class="box-bath"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-bath.png"/></a>
+      <% if(@offer_third.content.present? && @offer_third.percent.present? && @offer_third.offer_parent.present?)%>
+        <div class="box-bath">
+         <!-- <a href="#" title=""><img alt="" title="" src="/assets/images/img-bath.png"/></a> -->
+          <%= link_to @offer_third.image.present? ? image_tag(@offer_third.image.url) : image_tag("/assets/images/img-bath.png"), offers_homes_path(:param1 => @offer_third.offer_parent, :param2 => @offer_third.percent) %>
+
           <div class="box-thirty">
-            <h6>30<span><em>%</em> off</span></h6>
-            <p>selected</p>
+            <%= @offer_third.content.html_safe %>
           </div>
           <div class="box-miss">
-            <p>Bath accessories offers</p>
-            <p>Loreum ispum is a dummy text</p>
+            <%= @offer_third.additional.html_safe %>
           </div>
         </div>
+      <% end %>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <div class="box-mainbed"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-collection1.png"/></a>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">  
+      <% if(@offer_fourth.content.present? && @offer_fourth.percent.present? && @offer_fourth.offer_parent.present?)%>
+        <div class="box-mainbed">
+          <!-- <a href="#" title=""><img alt="" title="" src="/assets/images/img-collection1.png"/></a> -->
+          <%= link_to @offer_fourth.image.present? ? image_tag(@offer_fourth.image.url) : image_tag("/assets/images/img-collection1.png"), offers_homes_path(:param1 => @offer_fourth.offer_parent, :param2 => @offer_fourth.percent) %>
           <div class="box-thirty box-uptothirty">
-            <p class="bottom-spacE">up to</p>
-            <h6>30<span><em>%</em> off</span></h6>
+            <%= @offer_fourth.content.html_safe %>
           </div>
           <div class="box-miss">
-            <p>Bed linen offers</p>
-            <p>Loreum ispum is a dummy text</p>
+            <%= @offer_fourth.additional.html_safe %>
           </div>
-
         </div>
+      <% end %>
+
         <div class="box-bath box-bath640"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-bath.png"/></a>
           <div class="box-thirty">
             <h6>30<span><em>%</em> off</span></h6>
@@ -66,6 +71,7 @@
           </div>
         </div>
       </div>
+
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="box-mainbed box-collectionMiddil"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-collection2.png"/></a>
           <div class="box-thirty box-uptothirty">
@@ -78,6 +84,7 @@
           </div>
         </div>
       </div>
+
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <div class="box-mainbed"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-collection3.png"/></a>
           <div class="box-thirty box-uptothirty">
@@ -89,6 +96,7 @@
             <p>Exclusive offers for a limited time only</p>
           </div>
         </div>
+
         <div class="box-bath"> <a href="#" title=""><img alt="" title="" src="/assets/images/img-bath.png"/></a>
           <div class="box-thirty">
             <h6>30<span><em>%</em> off</span></h6>
@@ -99,6 +107,7 @@
             <p>Loreum ispum is a dummy text</p>
           </div>
         </div>
+
       </div>
     </div>
   </div>
