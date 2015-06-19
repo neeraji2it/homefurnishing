@@ -33,7 +33,7 @@
        <% if @offer_third.present? %>
         <% if(@offer_third.content.present? && @offer_third.percent.present? && @offer_third.offer_parent.present?)%>
           <div class="box-bath">
-            <%= link_to @offer_third.image.present? ? image_tag(@offer_third.image.url) : image_tag("/assets/images/img-bath.png"), offers_homes_path(:param1 => @offer_third.offer_parent, :param2 => @offer_third.percent) %>
+            <%= link_to @offer_third.image.present? ? image_tag(@offer_third.image.url(:thumb), :height => '154px' , :width => '315') : image_tag("/assets/images/img-bath.png"), offers_homes_path(:param1 => @offer_third.offer_parent, :param2 => @offer_third.percent) %>
 
             <div class="box-thirty">
               <%= @offer_third.content.html_safe %>
@@ -49,10 +49,10 @@
 
     <div class="row">
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">  
-      <% if @offer_second.present? %>
+      <% if @offer_fourth.present? %>
         <% if(@offer_fourth.content.present? && @offer_fourth.percent.present? && @offer_fourth.offer_parent.present?)%>
           <div class="box-mainbed">
-            <%= link_to @offer_fourth.image.present? ? image_tag(@offer_fourth.image.url) : image_tag("/assets/images/img-collection1.png"), offers_homes_path(:param1 => @offer_fourth.offer_parent, :param2 => @offer_fourth.percent) %>
+            <%= link_to @offer_fourth.image.present? ? image_tag(@offer_fourth.image.url(:thumb), height: '328px', width: '313px') : image_tag("/assets/images/img-collection1.png"), offers_homes_path(:param1 => @offer_fourth.offer_parent, :param2 => @offer_fourth.percent) %>
             <div class="box-thirty box-uptothirty">
               <%= @offer_fourth.content.html_safe %>
             </div>
@@ -66,7 +66,7 @@
       <% if @offer_seventh.present? %>
         <% if(@offer_seventh.content.present? && @offer_seventh.percent.present? && @offer_seventh.offer_parent.present?)%>
           <div class="box-bath box-bath640"> 
-            <%= link_to @offer_seventh.image.present? ? image_tag(@offer_seventh.image.url) : image_tag("/assets/images/img-bath.png"), offers_homes_path(:param1 => @offer_seventh.offer_parent, :param2 => @offer_seventh.percent) %>
+            <%= link_to @offer_seventh.image.present? ? image_tag(@offer_seventh.image.url(:thumb), height: '154px;', width: '313px') : image_tag("/assets/images/img-bath.png"), offers_homes_path(:param1 => @offer_seventh.offer_parent, :param2 => @offer_seventh.percent) %>
             <div class="box-thirty">
               <%= @offer_seventh.content.html_safe %>
             </div>
@@ -82,7 +82,7 @@
         <% if(@offer_fifth.content.present? && @offer_fifth.percent.present? && @offer_fifth.offer_parent.present?)%>
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
           <div class="box-mainbed box-collectionMiddil">
-            <%= link_to @offer_fifth.image.present? ? image_tag(@offer_fifth.image.url) : image_tag("/assets/images/img-collection2.png"), offers_homes_path(:param1 => @offer_fifth.offer_parent, :param2 => @offer_fifth.percent) %>
+            <%= link_to @offer_fifth.image.present? ? image_tag(@offer_fifth.image.url(:thumb), width: '316px', height: '563px') : image_tag("/assets/images/img-collection2.png"), offers_homes_path(:param1 => @offer_fifth.offer_parent, :param2 => @offer_fifth.percent) %>
             <div class="box-thirty box-uptothirty">
               <%= @offer_fifth.content.html_safe %>
             </div>
@@ -98,7 +98,7 @@
       <% if @offer_sixth.present? %>
         <% if(@offer_sixth.content.present? && @offer_sixth.percent.present? && @offer_sixth.offer_parent.present?)%>
           <div class="box-mainbed">
-            <%= link_to @offer_sixth.image.present? ? image_tag(@offer_sixth.image.url) : image_tag("/assets/images/img-collection3.png"), offers_homes_path(:param1 => @offer_sixth.offer_parent, :param2 => @offer_sixth.percent) %>
+            <%= link_to @offer_sixth.image.present? ? image_tag(@offer_sixth.image.url(:thumb), height: '328px', width: '313px') : image_tag("/assets/images/img-collection3.png"), offers_homes_path(:param1 => @offer_sixth.offer_parent, :param2 => @offer_sixth.percent) %>
             <div class="box-thirty box-uptothirty">
               <%= @offer_sixth.content.html_safe %>
             </div>
@@ -112,7 +112,7 @@
       <% if @offer_eighth.present? %>
         <% if(@offer_eighth.content.present? && @offer_eighth.percent.present? && @offer_eighth.offer_parent.present?)%>
           <div class="box-bath"> 
-            <%= link_to @offer_eighth.image.present? ? image_tag(@offer_eighth.image.url) : image_tag("/assets/images/img-bath.png"), offers_homes_path(:param1 => @offer_eighth.offer_parent, :param2 => @offer_eighth.percent) %>
+            <%= link_to @offer_eighth.image.present? ? image_tag(@offer_eighth.image.url(:thumb), height: '154px;', width: '315px') : image_tag("/assets/images/img-bath.png"), offers_homes_path(:param1 => @offer_eighth.offer_parent, :param2 => @offer_eighth.percent) %>
             <div class="box-thirty">
               <%= @offer_eighth.content.html_safe %>
             </div>
