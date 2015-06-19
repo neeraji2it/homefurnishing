@@ -17,20 +17,21 @@
         </div>
       <% end %>
     </div>
-  </div>
-   
+  </div>   
 <% end%>
 
 <article>
+  <% if(@offer_go.go_text.present? && @offer_go.go_percent.present? && @offer_go.go_parent.present?) %>
    <div class="box-whether">
     <div class="container">
       <div class="fright box-circel">
         <div class="box-divider"></div>
-        <div class="circle"> <%= link_to "Go!" %> </div>
+        <div class="circle"> <%= link_to "Go!", offers_homes_path(:param1 => @offer_go.go_parent, :param2 => @offer_go.go_percent) %> </div>
       </div>
-      <p>Whether you want to indulge in a makeover or add a few new touches to your bed, we've got up to <span> 30% off</span> statement throws, luxurious bed linen and cushion. covers.</p>
+      <p><%= @offer_go.go_text.html_safe %></p>
     </div>
   </div> 
+  <% end %>
   
   <div class="container">
      <%= render :partial => 'offer_collection' %>
