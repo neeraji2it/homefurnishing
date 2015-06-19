@@ -92,28 +92,28 @@
       <div class="da-panel-content">
         <%= form_for @offer_second, :url => offer_second_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
         <div class="da-form-row">
-          <label></label>
+          <label><%=f.label :content %></label>
           <div class="da-form-item large"> 
           <%= f.text_area :content, class: "form-control ckeditor" %>   
           </div>
         </div>
 
         <div class="da-form-row">
-          <label></label>
+          <label><%=f.label :percent %></label>
           <div class="da-form-item large"> 
           <%= f.text_field :percent, class: "form-control" %>  
           </div>
         </div>
 
         <div class="da-form-row">
-          <label></label>
+          <label><%=f.label :parent %></label>
           <div class="da-form-item large"> 
           <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %>
           </div>
         </div>
 
         <div class="da-form-row">
-          <label></label>
+          <label><%=f.label :additional %></label>
           <div class="da-form-item large"> 
            <%= f.text_area :additional, class: "form-control ckeditor" %>
           </div>
@@ -138,28 +138,28 @@
         <div class="da-panel-content">
           <%= form_for @offer_third, :url => offer_third_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
             <div class="da-form-row">
-              <label></label>
+              <label><%=f.label :content %></label>
               <div class="da-form-item large"> 
               <%= f.text_area :content, class: "form-control ckeditor" %> 
               </div>
             </div>
 
             <div class="da-form-row">
-              <label></label>
+              <label><%=f.label :percent %></label>
               <div class="da-form-item large"> 
               <%= f.text_field :percent, class: "form-control" %>
               </div>
             </div>
 
             <div class="da-form-row">
-              <label></label>
+              <label><%=f.label :parent %></label>
               <div class="da-form-item large"> 
               <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %>  
               </div>
             </div>
 
             <div class="da-form-row">
-              <label></label>
+              <label><%=f.label :additional %></label>
               <div class="da-form-item large"> 
                <%= f.text_area :additional, class: "form-control ckeditor" %>
               </div>
@@ -188,28 +188,28 @@
       <div class="da-panel-content">
        <%= form_for @offer_fourth, :url => offer_fourth_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :content %></label>
            <div class="da-form-item large"> 
            <%= f.text_area :content, class: "form-control ckeditor" %> 
            </div>
          </div>
 
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :percent %></label>
            <div class="da-form-item large"> 
            <%= f.text_field :percent, class: "form-control" %>
            </div>
          </div>
 
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :parent %></label>
            <div class="da-form-item large"> 
            <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %> 
            </div>
          </div>
 
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :additional %></label>
            <div class="da-form-item large"> 
             <%= f.text_area :additional, class: "form-control ckeditor" %>
            </div>
@@ -235,28 +235,28 @@
       <div class="da-panel-content">
        <%= form_for @offer_fifth, :url => offer_fifth_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :content %></label>
            <div class="da-form-item large"> 
            <%= f.text_area :content, class: "form-control ckeditor" %>   
            </div>
          </div>
 
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :percent %></label>
            <div class="da-form-item large"> 
            <%= f.text_field :percent, class: "form-control" %>
            </div>
          </div>
 
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :parent %></label>
            <div class="da-form-item large"> 
            <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %> 
            </div>
          </div>
 
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :additional %></label>
            <div class="da-form-item large"> 
             <%= f.text_area :additional, class: "form-control ckeditor" %>
            </div>
@@ -285,28 +285,28 @@
       <div class="da-panel-content">
         <%= form_for @offer_sixth, :url => offer_sixth_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
           <div class="da-form-row">
-            <label></label>
+            <label><%=f.label :content %></label>
             <div class="da-form-item large"> 
             <%= f.text_area :content, class: "form-control ckeditor" %> 
             </div>
           </div>
 
           <div class="da-form-row">
-            <label></label>
+            <label><%=f.label :percent %></label>
             <div class="da-form-item large"> 
             <%= f.text_field :percent, class: "form-control" %> 
             </div>
           </div>
 
           <div class="da-form-row">
-            <label></label>
+            <label><%=f.label :parent %></label>
             <div class="da-form-item large"> 
             <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %>  
             </div>
           </div>
 
           <div class="da-form-row">
-            <label></label>
+            <label><%=f.label :additional %></label>
             <div class="da-form-item large"> 
              <%= f.text_area :additional, class: "form-control ckeditor" %>
             </div>
@@ -332,28 +332,28 @@
       <div class="da-panel-content">
        <%= form_for @offer_seventh, :url => offer_seventh_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :content %></label>
            <div class="da-form-item large"> 
            <%= f.text_area :content, class: "form-control ckeditor" %>  
            </div>
          </div>
 
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :percent %></label>
            <div class="da-form-item large"> 
            <%= f.text_field :percent, class: "form-control" %>
            </div>
          </div>
 
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :parent %></label>
            <div class="da-form-item large"> 
            <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %>  
            </div>
          </div>
 
          <div class="da-form-row">
-           <label></label>
+           <label><%=f.label :additional %></label>
            <div class="da-form-item large"> 
             <%= f.text_area :additional, class: "form-control ckeditor" %>
            </div>
@@ -382,28 +382,28 @@
       <div class="da-panel-content">
         <%= form_for @offer_eighth, :url => offer_eighth_admin_offer_managers_path, :method => 'PUT', :html => {:class => "da-form"} do |f| %>
           <div class="da-form-row">
-            <label></label>
+            <label><%=f.label :content %></label>
             <div class="da-form-item large"> 
             <%= f.text_area :content, class: "form-control ckeditor" %>   
             </div>
           </div>
 
           <div class="da-form-row">
-            <label></label>
+            <label><%=f.label :percent %></label>
             <div class="da-form-item large"> 
             <%= f.text_field :percent, class: "form-control" %>
             </div>
           </div>
 
           <div class="da-form-row">
-            <label></label>
+            <label><%=f.label :parent %></label>
             <div class="da-form-item large"> 
             <%= f.select :offer_parent, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}) %>
             </div>
           </div>
 
           <div class="da-form-row">
-            <label></label>
+            <label><%=f.label :additional %></label>
             <div class="da-form-item large"> 
              <%= f.text_area :additional, class: "form-control ckeditor" %>
             </div>
