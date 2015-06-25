@@ -203,7 +203,7 @@ opacity:1;
 input[type="text"].input-search:-moz-placeholder {
 opacity:1;
 }
-input[type="submit"].btn-search { background: url(/assets/images/sprit-icon-right.png) no-repeat right 12px; height: 38px; width: 20px; position: absolute; right: 1px; }
+input[type="submit"].btn-search { background: url(/assets/images/sprit-icon-right.png) no-repeat right 8px; height: 38px; width: 20px; position: absolute; right: 1px; }
 input[type="text"].input-search {  border: 1px solid #ccc;
 border-radius: 0;
 height: 27px;
