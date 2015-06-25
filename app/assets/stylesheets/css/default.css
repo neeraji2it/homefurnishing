@@ -167,7 +167,7 @@ button.close:hover { background: none; }
 .nrow > div:first-child { font-weight: bold; }
 .f11 { font-size: 11px; }
 .bold { font-weight: bold; }
-.bposi { position: relative;  top: 34px;  margin-right: -15px;  }
+.bposi { position: relative;  top: 31px;  margin-right: -15px;  }
 footer { font-family: Tahoma, Geneva, sans-serif; }
 h1 { font-size: 28px; color: #545454; font-family: 'Conv_18925_HelveticaNeueLt_0'; text-align: center; padding-bottom: 17px; text-transform: uppercase; background: url(/assets/images/dot-gray.png) repeat-x 0px 19px; }
 h1 span { background-color: #FFF; padding: 0px 22px; }
