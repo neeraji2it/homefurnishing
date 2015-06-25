@@ -230,7 +230,7 @@ input[type="text"].input-search:-ms-input-placeholder {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 input[type="text"].input-search { padding: 7px 34px 7px 11px; }
 }
-.menu-bar {  border-bottom: 1px none #ccc; box-shadow: 0 1px 0 0 rgba(0,0,0,.1);}
+.menu-bar {  border-bottom: 1px solid #c29d12; border-top: 1px solid #c29d12; /*box-shadow: 0 1px 0 0 rgba(0,0,0,.1);*/}
 .menu-bar .navbar-collapse { padding: 0px; }
 ul.main-navigation { float: left; list-style: none; text-transform: uppercase; padding: 0px 0px; font-family: 'Conv_18925_HelveticaNeueLt_0'; }
 ul.main-navigation > li { float: left; }
