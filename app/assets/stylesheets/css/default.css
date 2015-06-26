@@ -212,7 +212,7 @@ font-size:15px;
 width: 51.6%;
 padding: 0 5px;
 
- }
+ } 
  input[type="text"].input-search::-webkit-input-placeholder {
     color: #ccc;
 }
