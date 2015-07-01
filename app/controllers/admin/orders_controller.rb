@@ -16,24 +16,30 @@ class Admin::OrdersController < ApplicationController
 	def order_status
 		@orders = Order.guest_orders.paginate(:page => params[:page], :per_page => 20).order("created_at DESC ")
 		if (params[:parm].present? && params[:parm] == "Shipped")
-			@order.update_attributes(:status => "Shipped")
-			flash[:notice] = "You have changed the order status to Shipped."
+			shipped_status
 		elsif (params[:parm].present? && params[:parm] == "Returned")
-			@order.update_attributes(:status => "Returned")
-			flash[:notice] = "You have changed the order status to Returned."
+			returned_status
 		end
-		#redirect_to guest_orders_admin_orders_path
 		redirect_to :back
 	end
   
   def show
-     @product = Product.all
-   @order_items = @order.cart.line_items
+    @product = Product.all
+    @order_items = @order.cart.line_items
   end
 
   private
   def set_order
     @order = Order.find(params[:id])
   end
-  
+
+  def shipped_status
+    @order.update_attributes(:status => "Shipped")
+    flash[:notice] = "You have changed the order status to Shipped."
+  end
+
+  def returned_status
+    @order.update_attributes(:status => "Returned")
+    flash[:notice] = "You have changed the order status to Returned."
+  end
 end
