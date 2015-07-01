@@ -6,11 +6,11 @@ class Admin::OrdersController < ApplicationController
 	end
 
 	def guest_orders
-    @orders = Order.guest_orders.search(params[:search]).paginate(:page => params[:page], :per_page => 20).order("created_at DESC ")
+    @orders = search Order.guest_orders
 	end
 	
 	def user_orders
-		@orders = Order.user_orders.search(params[:search]).paginate(:page => params[:page], :per_page => 20).order("created_at DESC ")
+		@orders = search Order.user_orders
 	end
 
 	def order_status
@@ -41,5 +41,9 @@ class Admin::OrdersController < ApplicationController
   def returned_status
     @order.update_attributes(:status => "Returned")
     flash[:notice] = "You have changed the order status to Returned."
+  end
+
+  def search(object)
+    object.search(params[:search]).paginate(:page => params[:page], :per_page => 20).order("created_at DESC ")
   end
 end
