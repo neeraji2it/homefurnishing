@@ -18,17 +18,7 @@ class HomesController < ApplicationController
   end
   
   def show
-   if params.has_key?(:param1) && params[:param1] == 'parent'
-     @category = Category.find(params[:id])
-     @categories = @category.sub_categories
-     @products = @category.products.paginate(:page => params[:page], :per_page => 20)
-     @header = @category.name
-   else 
-     @sub_category = SubCategory.find(params[:id])
-     @categories = @sub_category.category.sub_categories
-     @products = @sub_category.products.paginate(:page => params[:page], :per_page => 20)
-     @header = @sub_category.category.name
-   end
+   (params.has_key?(:param1) && params[:param1] == 'parent') ? display_category : display_sub_category
    @featured = Product.featured
  end
 
@@ -126,5 +116,19 @@ private
     @offer_sixth = CollectionSixth.first
     @offer_seventh = CollectionSeventh.first
     @offer_eighth = CollectionEighth.first
+  end
+
+  def display_category
+    @category = Category.find(params[:id])
+    @categories = @category.sub_categories
+    @products = @category.products.paginate(:page => params[:page], :per_page => 20)
+    @header = @category.name
+  end
+
+  def display_sub_category
+    @sub_category = SubCategory.find(params[:id])
+    @categories = @sub_category.category.sub_categories
+    @products = @sub_category.products.paginate(:page => params[:page], :per_page => 20)
+    @header = @sub_category.category.name
   end
 end
