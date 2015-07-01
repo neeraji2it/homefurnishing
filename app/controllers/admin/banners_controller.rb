@@ -38,13 +38,14 @@ def destroy
   redirect_to admin_banners_path
 end
 
-def visible(@banner_image)
+def visible
+  admin_visible(@banner_image)
   redirect_to admin_banners_path
 end
 
   private
   def banner_params
-    params.require(:banner).permit(:image, :small_description, :visible)
+    params.require(:banner).permit(:image, :small_description, :visible, :image_description)
   end
 
   def set_banner

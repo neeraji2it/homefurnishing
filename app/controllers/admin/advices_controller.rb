@@ -41,7 +41,8 @@ class Admin::AdvicesController < ApplicationController
     end
   end
 
-  def visible(@advice)
+  def visible
+    admin_visible(@advice)
     redirect_to admin_advices_path
   end
   

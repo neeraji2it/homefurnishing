@@ -40,7 +40,8 @@ class Admin::GuidesController < ApplicationController
     end
   end
 
-  def visible(@guide)
+  def visible
+    admin_visible(@guide)
     redirect_to admin_guides_path
   end
   
