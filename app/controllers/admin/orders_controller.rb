@@ -15,9 +15,9 @@ class Admin::OrdersController < ApplicationController
 
 	def order_status
 		@orders = Order.guest_orders.paginate(:page => params[:page], :per_page => 20).order("created_at DESC ")
-		if (params[:parm].present? && params[:parm] == "Shipped")
+		if (params.has_key?(:parm) && params[:parm] == "Shipped")
 			shipped_status
-		elsif (params[:parm].present? && params[:parm] == "Returned")
+		elsif (params.has_key?(:parm) && params[:parm] == "Returned")
 			returned_status
 		end
 		redirect_to :back
