@@ -1,5 +1,7 @@
 class Admin::OrdersController < ApplicationController
   before_filter :authenticate_admin!
+  before_action :set_order, only: [:order_status, :show]
+
 	def index
 	end
 
@@ -13,7 +15,6 @@ class Admin::OrdersController < ApplicationController
 
 	def order_status
 		@orders = Order.guest_orders.paginate(:page => params[:page], :per_page => 20).order("created_at DESC ")
-		@order = Order.find(params[:id])
 		if (params[:parm].present? && params[:parm] == "Shipped")
 			@order.update_attributes(:status => "Shipped")
 			flash[:notice] = "You have changed the order status to Shipped."
@@ -26,9 +27,13 @@ class Admin::OrdersController < ApplicationController
 	end
   
   def show
-    @order = Order.find(params[:id])
      @product = Product.all
    @order_items = @order.cart.line_items
+  end
+
+  private
+  def set_order
+    @order = Order.find(params[:id])
   end
   
 end
