@@ -88,39 +88,39 @@ class Admin::OfferManagersController < ApplicationController
 
   private
   def offer_go_params
-    params.require(:offer_collection).permit!
+    params.require(:offer_collection).permit(:go_text, :go_percent, :go_parent)
   end
 
   def offer_first_params
-    params.require(:collection_first).permit!
+    params.require(:collection_first).permit(:content, :percent, :offer_parent)
   end
 
   def offer_second_params
-    params.require(:collection_second).permit!
+    params.require(:collection_second).permit(:content, :percent, :offer_parent, :additional)
   end
 
   def offer_third_params
-    params.require(:collection_third).permit!
+    params.require(:collection_third).permit(:content, :percent, :offer_parent, :additional, :image)
   end
 
   def offer_fourth_params
-    params.require(:collection_fourth).permit!
+    params.require(:collection_fourth).permit(:content, :percent, :offer_parent, :additional, :image)
   end
 
   def offer_fifth_params
-    params.require(:collection_fifth).permit!
+    params.require(:collection_fifth).permit(:content, :percent, :offer_parent, :additional, :image)
   end
 
   def offer_sixth_params
-    params.require(:collection_sixth).permit!
+    params.require(:collection_sixth).permit(:content, :percent, :offer_parent, :additional, :image)
   end
 
   def offer_seventh_params
-    params.require(:collection_seventh).permit!
+    params.require(:collection_seventh).permit(:content, :percent, :offer_parent, :additional, :image)
   end
 
   def offer_eighth_params
-    params.require(:collection_eighth).permit!
+    params.require(:collection_eighth).permit(:content, :percent, :offer_parent, :additional, :image)
   end
 
   def load_all
