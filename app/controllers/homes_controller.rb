@@ -106,18 +106,6 @@ private
     params.require(:news_letter).permit(:name, :email)
   end
 
-  def offer_collections
-    @offer_go = OfferCollection.first
-    @offer_first = CollectionFirst.first
-    @offer_second = CollectionSecond.first
-    @offer_third = CollectionThird.first
-    @offer_fourth = CollectionFourth.first
-    @offer_fifth = CollectionFifth.first
-    @offer_sixth = CollectionSixth.first
-    @offer_seventh = CollectionSeventh.first
-    @offer_eighth = CollectionEighth.first
-  end
-
   def display_category
     @category = Category.find(params[:id])
     @categories = @category.sub_categories

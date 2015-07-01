@@ -1,5 +1,5 @@
 class Admin::OfferManagersController < ApplicationController
-  before_action :load_all
+  before_action :offer_collections
 
   def index
     
@@ -121,18 +121,6 @@ class Admin::OfferManagersController < ApplicationController
 
   def offer_eighth_params
     params.require(:collection_eighth).permit(:content, :percent, :offer_parent, :additional, :image)
-  end
-
-  def load_all
-    @offer_go = OfferCollection.first_or_initialize
-    @offer_first = CollectionFirst.first_or_initialize
-    @offer_second = CollectionSecond.first_or_initialize
-    @offer_third = CollectionThird.first_or_initialize
-    @offer_fourth = CollectionFourth.first_or_initialize
-    @offer_fifth = CollectionFifth.first_or_initialize
-    @offer_sixth = CollectionSixth.first_or_initialize
-    @offer_seventh = CollectionSeventh.first_or_initialize
-    @offer_eighth = CollectionEighth.first_or_initialize
   end
 
 end
