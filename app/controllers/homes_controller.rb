@@ -109,12 +109,12 @@ def load_image
 end
 
 private
-  def product_params
-    params.require(:product).permit!
-  end
+  # def product_params
+  #   params.require(:product).permit
+  # end
 
   def news_letter_params
-    params.require(:news_letter).permit!
+    params.require(:news_letter).permit(:name, :email)
   end
 
   def offer_collections
