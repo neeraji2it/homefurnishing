@@ -40,6 +40,10 @@ def load_news_letter
   @news_letter ||= NewsLetter.new
 end
 
+def prod_cat_search(object)
+  object.search(params[:search]).paginate(:page => params[:page], :per_page => 20).order("created_at DESC ")
+end
+
 protected
 def get_layout
   if devise_controller? && (resource_name == :admin || resource_name == :user)

@@ -26,7 +26,7 @@ class Admin::ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.search(params[:search]).paginate(:page => params[:page], :per_page => 20).order("created_at DESC ")
+    @products = prod_cat_search Product
   end
 
   def edit
