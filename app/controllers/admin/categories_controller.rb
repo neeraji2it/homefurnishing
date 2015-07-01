@@ -53,6 +53,6 @@ class Admin::CategoriesController < ApplicationController
 
   private
   def category_params
-    params.require(:category).permit!
+    params.require(:category).permit(:name, :category_show)
   end
 end
