@@ -22,6 +22,6 @@ class Admin::StocksController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def product_params
-    params.require(:product).permit!
+    params.require(:product).permit(:name, :quantity)
   end
 end
