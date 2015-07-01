@@ -11,7 +11,7 @@ class HomesController < ApplicationController
   end
   
   def category
-    @categories = SubCategory.where("id = '#{params[:category_id]}'")
+    @categories = SubCategory.where("id=?", params[:category_id])
     respond_to do |format|
       format.js
     end
@@ -33,7 +33,6 @@ class HomesController < ApplicationController
  end
 
   def offers
-    # @products = Product.where("discount != ''").paginate(:page => params[:page], :per_page => 20)
     if params.has_key?(:param1) && params.has_key?(:param2)
       category_id = params[:param1]
       discount = params[:param2]
