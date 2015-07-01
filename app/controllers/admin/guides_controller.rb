@@ -48,6 +48,6 @@ class Admin::GuidesController < ApplicationController
   
   private
   def guides_params
-    params.require(:buying_guide).permit!
+    params.require(:buying_guide).permit(:title, :description, :image, :visible)
   end
 end
