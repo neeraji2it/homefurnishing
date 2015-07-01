@@ -48,6 +48,6 @@ end
 
   private
   def banner_params
-    params.require(:banner).permit!
+    params.require(:banner).permit(:image, :small_description, :visible)
   end
 end
