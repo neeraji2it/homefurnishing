@@ -1,6 +1,7 @@
 class Admin::ProductsController < ApplicationController
   helper_method :sort_column, :sort_direction
   before_filter :authenticate_admin!
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :discount, :flag]
   
   def new 
     @product = Product.new
@@ -22,7 +23,6 @@ class Admin::ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
   end
 
   def index
@@ -30,11 +30,9 @@ class Admin::ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find(params[:id])
   end
 
   def update
-    @product = Product.find(params[:id])
     if params[:sub_category_id].present?
       @product.sub_category_id = params[:sub_category_id]
     end
@@ -47,7 +45,6 @@ class Admin::ProductsController < ApplicationController
   end 
 
   def destroy
-  	@product = Product.find(params[:id])
     if	@product.destroy
       flash[:notice] = "Product deleted successfully." 
   	 redirect_to admin_products_path
@@ -71,14 +68,12 @@ class Admin::ProductsController < ApplicationController
   end
 
   def discount
-    @product = Product.find(params[:id])
     @product.update_attributes
     redirect_to admin_product_path(@product)
   end
 
 
   def flag
-    @product = Product.find(params[:id])
     @product.update_attributes(:is_featured => params[:is_featured])
     redirect_to admin_products_path
   end
@@ -90,6 +85,10 @@ class Admin::ProductsController < ApplicationController
   
   private
  
+  def set_product
+    @product = Product.find(params[:id])
+  end
+
   def product_params
     params.require(:product).permit(:name, :description, :price, :sub_category_id, :discount, :is_featured, :quantity, :color, :product_size, :category_id)
   end
