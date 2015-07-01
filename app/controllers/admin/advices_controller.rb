@@ -1,5 +1,7 @@
 class Admin::AdvicesController < ApplicationController
   before_filter :authenticate_admin!
+  before_action :set_advice, only: [:edit, :update, :destroy, :visible]
+
   def index
     @advices = Advice.paginate(:page => params[:page], :per_page => 20)
   end
@@ -19,11 +21,10 @@ class Admin::AdvicesController < ApplicationController
   end
   
   def edit
-    @advice = Advice.find(params[:id])
+    
   end
   
   def update
-    @advice = Advice.find(params[:id])
     if @advice.update_attributes(advice_params)
       flash[:notice] = "Advices updated Successfully"
       redirect_to admin_advices_path
@@ -34,7 +35,6 @@ class Admin::AdvicesController < ApplicationController
   end
   
   def destroy
-    @advice = Advice.find(params[:id])
     if @advice.destroy
       flash[notice] = "Advices deleted Successfully"
       redirect_to admin_advices_path
@@ -42,12 +42,15 @@ class Admin::AdvicesController < ApplicationController
   end
 
   def visible
-    @advice = Advice.find(params[:id])
     (@advice.visible==true) ? (@advice.update_attributes(:visible => false)) : (@advice.update_attributes(:visible => true))
     redirect_to admin_advices_path
   end
   
   private
+  def set_advice
+    @advice = Advice.find(params[:id])
+  end
+
   def advice_params
     params.require(:advice).permit(:title, :description, :avatar, :visible)
   end

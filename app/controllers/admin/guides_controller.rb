@@ -1,5 +1,7 @@
 class Admin::GuidesController < ApplicationController
   before_filter :authenticate_admin!
+  before_action :set_guide, only: [:edit, :update, :destroy, :visible]
+
   def index
     @guides = BuyingGuide.all.paginate(:page => params[:page], :per_page => 20)
   end
@@ -18,11 +20,10 @@ class Admin::GuidesController < ApplicationController
   end
   
   def edit
-    @guide = BuyingGuide.find(params[:id])
+    
   end
   
   def update
-    @guide = BuyingGuide.find(params[:id])
     if @guide.update_attributes(guides_params)
       flash[:notice] = "Buying Guide updated Successfully"
       redirect_to admin_guides_path
@@ -33,7 +34,6 @@ class Admin::GuidesController < ApplicationController
   end
   
   def destroy
-    @guide = BuyingGuide.find(params[:id])
     if @guide.destroy
       flash[notice] = "BuyingGuides deleted Successfully"
       redirect_to admin_guides_path
@@ -41,12 +41,15 @@ class Admin::GuidesController < ApplicationController
   end
 
   def visible
-    @guide = BuyingGuide.find(params[:id])
     (@guide.visible==true) ? (@guide.update_attributes(:visible => false)) : (@guide.update_attributes(:visible => true))
     redirect_to admin_guides_path
   end
   
   private
+  def set_guide
+    @guide = BuyingGuide.find(params[:id])
+  end
+
   def guides_params
     params.require(:buying_guide).permit(:title, :description, :image, :visible)
   end

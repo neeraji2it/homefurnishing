@@ -1,6 +1,8 @@
 class Admin::BannersController < ApplicationController
  before_filter :authenticate_admin!
- def index
+ before_action :set_banner, only: [:show, :edit, :update, :destroy, :visible]
+
+def index
   @banner_images = Banner.paginate(:page => params[:page], :per_page => 20)
 end
 
@@ -9,7 +11,6 @@ def new
 end
 
 def show
-   @banner_image = Banner.find(params[:id])
 end
 
 def create
@@ -22,11 +23,9 @@ def create
 end
 
 def edit
-  @banner_image = Banner.find(params[:id])
 end
 
 def update
-  @banner_image = Banner.find(params[:id])
   if @banner_image.update_attributes(banner_params)
     redirect_to admin_banners_path
   else
@@ -35,19 +34,21 @@ def update
 end
 
 def destroy
-  @banner_image = Banner.find(params[:id])
   @banner_image.destroy
   redirect_to admin_banners_path
 end
 
 def visible
-  @banner = Banner.find(params[:id])
-  (@banner.visible==true) ? (@banner.update_attributes(:visible => false)) : (@banner.update_attributes(:visible => true))
+  (@banner_image.visible==true) ? (@banner_image.update_attributes(:visible => false)) : (@banner_image.update_attributes(:visible => true))
   redirect_to admin_banners_path
 end
 
   private
   def banner_params
     params.require(:banner).permit(:image, :small_description, :visible)
+  end
+
+  def set_banner
+    @banner_image = Banner.find(params[:id])
   end
 end
