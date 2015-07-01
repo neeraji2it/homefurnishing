@@ -49,6 +49,6 @@ class Admin::AdvicesController < ApplicationController
   
   private
   def advice_params
-    params.require(:advice).permit!
+    params.require(:advice).permit(:title, :description, :avatar, :visible)
   end
 end
