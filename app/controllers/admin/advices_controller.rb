@@ -41,8 +41,7 @@ class Admin::AdvicesController < ApplicationController
     end
   end
 
-  def visible
-    (@advice.visible==true) ? (@advice.update_attributes(:visible => false)) : (@advice.update_attributes(:visible => true))
+  def visible(@advice)
     redirect_to admin_advices_path
   end
   

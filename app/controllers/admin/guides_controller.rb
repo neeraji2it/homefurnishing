@@ -40,8 +40,7 @@ class Admin::GuidesController < ApplicationController
     end
   end
 
-  def visible
-    (@guide.visible==true) ? (@guide.update_attributes(:visible => false)) : (@guide.update_attributes(:visible => true))
+  def visible(@guide)
     redirect_to admin_guides_path
   end
   

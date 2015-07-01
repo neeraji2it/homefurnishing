@@ -38,8 +38,7 @@ def destroy
   redirect_to admin_banners_path
 end
 
-def visible
-  (@banner_image.visible==true) ? (@banner_image.update_attributes(:visible => false)) : (@banner_image.update_attributes(:visible => true))
+def visible(@banner_image)
   redirect_to admin_banners_path
 end
 
