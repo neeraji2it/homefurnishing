@@ -17,7 +17,7 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def index
-    @categories = Category.search(params[:search]).paginate(:page => params[:page], :per_page => 20).order("created_at DESC")
+    @categories = prod_cat_search Category
   end
 
   def show
