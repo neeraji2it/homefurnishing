@@ -4,7 +4,10 @@
 			</div>
 			<div id="da-login-box-content">
 
-				<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {id: 'da-login-form'}) do |f| %>
+				<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: {id: 'da-login-form', method: :put}) do |f| %>
+				<%= devise_error_messages! %>
+				<%= f.hidden_field :reset_password_token %>
+
 				<div id="da-login-input-wrapper">
 
 					<div class="da-login-input">

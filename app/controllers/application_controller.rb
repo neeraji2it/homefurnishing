@@ -15,6 +15,8 @@ end
 def after_sign_in_path_for(resource_or_scope)
   if resource_or_scope.is_a?(Admin)
     admin_dashboards_path
+  elsif resource_or_scope.is_a?(User)
+    homes_path
   end
 end
 
