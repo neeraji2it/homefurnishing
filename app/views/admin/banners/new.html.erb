@@ -9,7 +9,7 @@
         </span>
       </div>
       <div class="da-panel-content">
-        <%= form_for(@banner_image, :url =>  admin_banner_path(@banner_image), :html => {:class => "da-form"}) do |f| %>
+        <%= form_for(@banner_image, :url =>  admin_banners_path, :html => {:class => "da-form"}) do |f| %>
           <%= render :partial => 'form', :locals => {:f => f} %>
         <% end %>
         </div>
