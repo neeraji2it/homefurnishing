@@ -1,3 +1,17 @@
+
+@media(max-width:2000px) and (max-width:781px){
+.nav li {  width:10% !important;}
+
+
+
+}
+@media(min-width:781px){
+.nav li {  width:10% !important;}
+
+
+
+}
+
 .nav,
 .nav a,
 .nav ul,
@@ -309,6 +323,7 @@ ul.navbar-nav > li a:hover, ul.navbar-nav > li a.active { color: #FFF; border-ra
 
 @media (max-width:1199px){
     .nav > li > a{ padding-right:81px}
+.nav > li > {width:12%;}
 }
 @media (max-width: 1024px){
     
