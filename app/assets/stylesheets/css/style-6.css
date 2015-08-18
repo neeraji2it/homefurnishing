@@ -1,5 +1,15 @@
+@media(max-width:2000px) and (max-width:781px){
+.nav li {  width:10% !important;}
 
 
+
+}
+@media(min-width:781px){
+.nav li {  width:10% !important;}
+
+
+
+}
 
 .nav,
 .nav a,
