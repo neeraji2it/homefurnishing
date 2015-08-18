@@ -175,6 +175,39 @@ overflow: auto;
 
 }
 
+/*  mobile device--------------------*/
+@media screen and (max-width:480px)
+{
+
+ .nav > li {
+    display: block;
+    float: none !important;
+     clear: both;
+}
+
+.nav > li > .menu_sub {
+   
+    display: inline-block;
+    width: 150px;
+    top: 0;
+    left: 128px;
+  
+
+}
+.nav > li:active > .menu_sub {
+
+
+height: 200px;
+ 
+
+}
+.nav > li > a {
+ width: 130px;
+}
+
+}
+
+
 @media screen and (max-width: 360px)
 {
 
