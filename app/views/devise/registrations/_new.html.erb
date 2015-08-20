@@ -1,0 +1,40 @@
+<div id="da-login-box">
+          <div id="da-login-box-header">
+              
+            </div>
+            <div id="da-login-box-content">
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: 'da-login-form'}) do |f| %>
+              <%= devise_error_messages! %>
+                  <div id="da-login-input-wrapper">
+                      <div class="da-login-input">
+                        <%= f.text_field :first_name, :class => "form-control",autofocus: true, id: "da-login-username", placeholder:"First Name"%>
+                      </div>
+<br/>
+                      <div class="da-login-input">
+                        <%= f.text_field :last_name, :class => "form-control",id: "da-login-username", placeholder:"Last Name"%>
+                      </div><br/>
+
+                      <div class="da-login-input">
+                        <%= f.email_field :email,:class => "form-control", id: "da-login-email", placeholder:"Email address"%>
+                      </div><br/>
+
+                      <div class="da-login-input">
+                      <% if @validatable %><% end %>
+                        <%= f.password_field :password,:class => "form-control", autocomplete: "off", id: "da-login-password", placeholder: "Password" %>
+                      </div>
+<br/>
+                      <div class="da-login-input">
+                        <%= f.password_field :password_confirmation,:class => "form-control", autocomplete: "off", placeholder: "re-type password",id: "da-login-password" %>
+                      </div><br/>
+
+                    </div>
+                    <div id="da-login-button">
+                      <%= f.submit "Sign Up", id: "da-login-submit" %>
+                    </div>
+                <% end %>
+            </div>
+            <div id="da-login-box-footer">
+                 <%#= render "devise/shared/links" %>
+                <div id="da-login-tape"></div>
+            </div>
+        </div>

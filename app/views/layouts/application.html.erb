@@ -34,18 +34,10 @@
              <!--  help  link removed -->
            </li>
            <% if !current_user %>
-              <!-- <li class="icon-up">
-                <%= link_to "Sign up link", new_user_registration_path %>
-              </li> -->
-              <li class="icon-in">
-              <%#= link_to "Sign in", new_user_session_path %>
-                 <%= link_to "Sign up", new_user_registration_path %>
-                   <div class="btn btn-sm btn-primary" data-toggle="modal" data-target="#signupForm"> sign up</div>
+                            <%= link_to "sign Up", "#", :onclick => "signup()", :class => "btn btn-sm btn-primary" %>
+                 <%= link_to "sign in", "#", :onclick => "signin()", :class => "btn btn-sm btn-primary" %>
 
-              <div class="btn btn-sm btn-primary" data-toggle="modal" data-target="#signinForm"> sign in</div>
-
-              </li>
-              <% end %>
+                          <% end %>
 
               <% if current_user%>
               <li class="icon-up">
@@ -107,174 +99,36 @@
     <%= render :partial => "layouts/footer" %>
   </body>
   </html>
-  <style type="text/css">.menu-align{ text-align: center;}</style>> 
 
-
-  <div class="modal fade" id="signinForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-content">
-      <div class="modal-header">
-
-       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;          </button>
-       <h4 class="modal-title" id="myModalLabel"></h4>
-     </div>
-     <div class="modal-body">
-
-      <div class="row">
-        <div class="col-md-6">
-    <img class="prodimg" src="/assets/Giveaways1.jpg" alt="Give away">
-        </div>
-        <div class="col-md-6">
-
-<h2>Welcome To Rosara Home</h2>
-<hr/>          <div class="modal-body">
-            <h2>Log in</h2>
-            <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'}) do |f| %>
-
-            <div class="field">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, :class => "form-control", autofocus: true %>
+  <div class="modal fade" id="SignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close icon-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h2 class="modal-title" id="myModalLabel">Sign In</h2>
+            <div class="modal-body">
+                <%= render :partial => '/devise/sessions/new' %>
             </div>
-
-
-            <div class="field"><%= f.label :password %><br />
-              <%= f.password_field :password, :class => "form-control", autocomplete: "off" %></div>
-
-              <% if devise_mapping.rememberable? -%>
-              <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-              <% end -%>
-  <p><button type="submit" class="btn btn-primary">Sign in</button>
-          
-            </div>
-
-            <% end %>
-
-          
-          </div>
-
         </div>
-        <div class="modal-footer">
-          <div class="footer">
-            <h5 class="grey-band clearfix">
-              Delivering in Ahmedabad | Bangalore | Chandigarh | Chennai | Delhi/NCR | Hyderabad | Jaipur | Kochi | Kolkata | Mangalore | Mumbai | Pune|  Visakhapatnam
-            </h5>
-          </div>
-
-        </div>
-      </div>
     </div>
+</div>
 
+<div class="modal fade" id="SignUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close icon-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h2 class="modal-title" id="myModalLabel">SignUp</h2>
+            <div class="modal-body">
+                            <%= render :partial => '/devise/registrations/new' %>
 
-    <style>
-      .grey-band {
-        background: none repeat scroll 0 0 #333333;
-        display: block;
-        margin: 0;
-        padding: 10px;
-        font-size: 14px;
-      }
-
-    </style>
-
-
-
-
-
-
-
-
-<div class="modal fade" id="signupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-content">
-  <div class="modal-header">
-
-   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;          </button>
-    <h4 class="modal-title" id="myModalLabel"></h4>
-  </div>
-  <div class="modal-body">
-  
-<div class="row">
-  <div class="col-md-6">
-    <img class="prodimg" src="/assets/Giveaways1.jpg" alt="Give away">
-  </div>
-<div class="col-md-6">
-  
-<h2>Welcome To Rosara Home</h2>
-<hr/>          <div class="modal-body">
-            
-  
-  
-  
-  
-  
-   <% if !resource.is_a?(Admin) %>
-<div id="da-login-box">
-          <div id="da-login-box-header">
-              <h2>Sign Up</h2>
-            </div>
-            <div id="da-login-box-content">
-              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {id: 'da-login-form'}) do |f| %>
-              <%= devise_error_messages! %>
-                  <div id="da-login-input-wrapper">
-                      <div class="da-login-input">
-                        <%= f.text_field :first_name,:class => "form-control", autofocus: true, id: "da-login-username", placeholder:"First Name"%>
-                      </div>
-<br/>
-                      <div class="da-login-input">
-                        <%= f.text_field :last_name, id: "da-login-username",:class => "form-control", placeholder:"Last Name"%>
-                      </div> <br/>
-
-                      <div class="da-login-input">
-                        <%= f.email_field :email, id: "da-login-email", :class => "form-control",placeholder:"Email address"%>
-                      </div> <br/>
-
-                      <div class="da-login-input">
-                      <% if @validatable %><% end %>
-                        <%= f.password_field :password,:class => "form-control", autocomplete: "off", id: "da-login-password", placeholder: "Password" %>
-                      </div>
-<br/>
-                      <div class="da-login-input">
-                        <%= f.password_field :password_confirmation,:class => "form-control", autocomplete: "off", placeholder: "re-type password",id: "da-login-password" %>
-                      </div>
-<br/>
-                    </div>
-                    <div id="da-login-button">
-                      <%= f.submit "Sign Up", id: "da-login-submit" %>
-                    </div> 
-                <% end %>
-            </div>
-            <div id="da-login-box-footer">
-                 <%#= render "devise/shared/links" %>
-                <div id="da-login-tape"></div>
             </div>
         </div>
-        <% end %>
-  
-  
-  
-
-          
-          </div>
+    </div>
 </div>
-
-  </div>
-  <div class="modal-footer">
-  <div class="footer">
-<h5 class="grey-band clearfix">
-Delivering in Ahmedabad | Bangalore | Chandigarh | Chennai | Delhi/NCR | Hyderabad | Jaipur | Kochi | Kolkata | Mangalore | Mumbai | Pune|  Visakhapatnam
-</h5>
-  </div>
-
-  </div>
-</div>
-</div>
-
-
-<style>
-.grey-band {
-    background: none repeat scroll 0 0 #333333;
-    display: block;
-    margin: 0;
-    padding: 10px;
-    font-size: 14px;
-}
-
-</style>
+<script>
+  function signin(){
+    $("#SignIn").modal();
+  }
+   function signup(){
+    $("#SignUp").modal();
+  }
+</script>

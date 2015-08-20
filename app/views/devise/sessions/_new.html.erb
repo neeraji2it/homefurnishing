@@ -1,0 +1,27 @@
+<div id="da-login-box">
+          <div id="da-login-box-header">
+        
+            </div>
+            <div id="da-login-box-content">
+              
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {id: 'da-login-form'}) do |f| %>
+                  <div id="da-login-input-wrapper">
+                      <div class="da-login-input">
+                          <%= f.email_field :email, :class => "form-control",autofocus: true, id: "da-login-username", placeholder:"Email address"%>
+                        </div><br/>
+                      <div class="da-login-input">
+                          <%= f.password_field :password,:class => "form-control", autocomplete: "off", id: "da-login-password",
+                      placeholder: "Password" %><br/>
+                        </div>
+                    </div>
+                    <div id="da-login-button">
+                      <!-- <input type="submit" value="Login" id="da-login-submit" /> -->
+                      <%= f.submit "Sign in", id: "da-login-submit" %>
+                    </div>
+                <% end %>
+            </div>
+            <div id="da-login-box-footer">
+                 <%#= render "devise/shared/links" %>
+                <div id="da-login-tape"></div>
+            </div>
+        </div>
