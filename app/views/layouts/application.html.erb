@@ -34,101 +34,122 @@
              <!--  help  link removed -->
            </li>
            <% if !current_user %>
-                            <%= link_to "sign Up", "#", :onclick => "signup()", :class => "btn btn-sm btn-primary" %>
-                 <%= link_to "sign in", "#", :onclick => "signin()", :class => "btn btn-sm btn-primary" %>
+           <%= link_to "sign Up", "#", :onclick => "signup()", :class => "btn btn-sm btn-primary" %>
+           <%= link_to "sign in", "#", :onclick => "signin()", :class => "btn btn-sm btn-primary" %>
 
-                          <% end %>
+           <% end %>
 
-              <% if current_user%>
-              <li class="icon-up">
-                <%= link_to "Profile", profiles_path %>
-              </li>
-              <li class="icon-in">
-                <%= link_to("Log Out", destroy_user_session_path, :method => :delete)%>
-              </li>
+           <% if current_user%>
+           <li class="icon-up">
+            <%= link_to "Profile", profiles_path %>
+          </li>
+          <li class="icon-in">
+            <%= link_to("Log Out", destroy_user_session_path, :method => :delete)%>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="box-logo">
+        <div class="row">
+          <div class="col-xs-4 col-sm-6 col-md-6 col-lg-6">
+            <h1 id="logo"><%= link_to "Rosara", root_path, :title => "Rosara" %></h1>
+          </div>
+          <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6 text-right"> 
+
+            <div class="bposi">
+
+
+              <%= form_tag search_homes_path, :method => 'get',:id => "products_search" do %>
+
+              <%= link_to "Cart #{current_cart.line_items.count}", carts_path, :class => "chart", :title => "Cart" %>
+              <%= text_field_tag :search, params[:search], :placeholder => "Search", :class => "input-search" %>
+              <%= submit_tag "Search", :name => nil,:class => "btn-search", :value => "" %>
+
               <% end %>
-            </ul>
-          </div>
-        </div>
-        <div class="container">
-          <div class="box-logo">
-            <div class="row">
-              <div class="col-xs-4 col-sm-6 col-md-6 col-lg-6">
-                <h1 id="logo"><%= link_to "Rosara", root_path, :title => "Rosara" %></h1>
-              </div>
-              <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6 text-right"> 
 
-                <div class="bposi">
+            </div>    
 
-
-                  <%= form_tag search_homes_path, :method => 'get',:id => "products_search" do %>
-
-                  <%= link_to "Cart #{current_cart.line_items.count}", carts_path, :class => "chart", :title => "Cart" %>
-                  <%= text_field_tag :search, params[:search], :placeholder => "Search", :class => "input-search" %>
-                  <%= submit_tag "Search", :name => nil,:class => "btn-search", :value => "" %>
-
-                  <% end %>
-
-                </div>    
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-align-justify"></span> Menu</button>
-          </div>
-        </div>
-        <!-- <div class="menu-bar"> -->
-        <!-- <div class="container"> -->
-        <div class="menu-bar">
-         <div class="container">
-           <div class="navbar-collapse collapse">
-
-            <%= render :partial => "layouts/new_navbar" %>
           </div>
         </div>
       </div>
-      <!-- </div> -->
-
-      <!-- </div> -->
-    </header>
-    <%= render :partial => "layouts/notice_app" %>
-    <%= yield %> 
-    <%= render :partial => "layouts/footer" %>
-  </body>
-  </html>
-
-  <div class="modal fade" id="SignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <button type="button" class="close icon-close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="myModalLabel">Sign In</h2>
-            <div class="modal-body">
-                <%= render :partial => '/devise/sessions/new' %>
-            </div>
-        </div>
     </div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="glyphicon glyphicon-align-justify"></span> Menu</button>
+      </div>
+    </div>
+    <!-- <div class="menu-bar"> -->
+    <!-- <div class="container"> -->
+    <div class="menu-bar">
+     <div class="container">
+       <div class="navbar-collapse collapse">
+
+        <%= render :partial => "layouts/new_navbar" %>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+
+  <!-- </div> -->
+</header>
+<%= render :partial => "layouts/notice_app" %>
+<%= yield %> 
+<%= render :partial => "layouts/footer" %>
+</body>
+</html>
+
+<div class="modal fade" id="SignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close icon-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+
+
+
+          <h2 class="modal-title" id="myModalLabel">Welcome To Rosara Home</h2>
+          <div class="modal-body">
+                <div class="row">
+        <div class="col-md-6">
+          <img class="prodimg" src="/assets/Giveaways1.jpg" alt="Give away">
+        </div>
+        <div class="col-md-6">
+
+<h2>SignIn</h2>
+
+            <%= render :partial => '/devise/sessions/new' %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="modal fade" id="SignUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <button type="button" class="close icon-close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="myModalLabel">SignUp</h2>
-            <div class="modal-body">
-                            <%= render :partial => '/devise/registrations/new' %>
-
-            </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button type="button" class="close icon-close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      <h2 class="modal-title" id="myModalLabel">SignUp</h2>
+      <div class="modal-body">
+       <div class="row">
+        <div class="col-md-6">
+          <img class="prodimg" src="/assets/Giveaways1.jpg" alt="Give away">
         </div>
+        <div class="col-md-6">
+          <%= render :partial => '/devise/registrations/new' %>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 </div>
 <script>
   function signin(){
     $("#SignIn").modal();
   }
-   function signup(){
+  function signup(){
     $("#SignUp").modal();
   }
 </script>
