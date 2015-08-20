@@ -60,7 +60,13 @@ def offer_collections
   @offer_sixth = CollectionSixth.first_or_initialize
   @offer_seventh = CollectionSeventh.first_or_initialize
   @offer_eighth = CollectionEighth.first_or_initialize
+end 
+
+def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
 end
+  helper_method :current_user
+
 
 protected
 def get_layout

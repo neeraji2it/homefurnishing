@@ -1,7 +1,7 @@
 Furnitureapp::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :admins
-  devise_for :users, :controllers => {:sessions => "sessions"}
+  devise_for :users, :controllers => {:sessions => "sessions", :omniauth_callbacks => "omniauth_callbacks"}
   namespace :admin do
     resources :offer_managers do 
       collection do 
@@ -121,4 +121,11 @@ Furnitureapp::Application.routes.draw do
     end
   end
   root 'homes#index'
+  devise_scope :user do
+    get '/auth/:provider/callback' => 'omniauth_callbacks#facebook'
+  end
+  get 'signout', to: 'omniauth_callbacks#destroy', as: 'signout'
+
+# resources :omniauth_callbacks, only: [:create, :destroy]
+
 end
