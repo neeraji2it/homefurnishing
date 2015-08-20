@@ -7,5 +7,17 @@ module ApplicationHelper
 		link_to name, params.merge(:sort => column, :direction => direction, :page => nil), {:class => css_class}
 	end
 
+	def resource_name
+		:user
+	end
+
+	def resource
+		@resource ||= User.new
+	end
+
+	def devise_mapping
+		@devise_mapping ||= Devise.mappings[:user]
+	end
+
 
 end
