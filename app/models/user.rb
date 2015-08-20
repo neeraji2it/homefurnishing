@@ -17,14 +17,7 @@ class User < ActiveRecord::Base
 #:numericality => true,
     #             :length => { :minimum => 10 ,:maximum => 10 }
 
-    #   def self.create_with_omniauth(auth)
-    # create! do |user|
-    #   user.provider = auth["provider"]
-    #   user.uid = auth["uid"]
-    #   user.name = auth["user_info"]["name"]
-    # end
-    # end
-
+  
 def self.from_omniauth(auth_hash)
   unless user = User.find_by_email(auth_hash['info']['email'])
       email = auth_hash['info']['email']
