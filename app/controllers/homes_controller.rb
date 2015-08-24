@@ -113,10 +113,21 @@ private
     @header = @category.name
   end
 
-  def display_sub_category
-    @sub_category = SubCategory.find(params[:id])
-    @categories = @sub_category.category.sub_categories
+  # def display_sub_category
+  #   @sub_category = SubCategory.find(params[:id])
+  #   @categories = @sub_category.category.sub_categories
+  #   @products = @sub_category.products.paginate(:page => params[:page], :per_page => 20)
+  #   @header = @sub_category.category.name
+  # end
+
+ def display_category
+    @sub_category = Category.find(params[:id])
+    @categories = @sub_category.sub_categories
     @products = @sub_category.products.paginate(:page => params[:page], :per_page => 20)
-    @header = @sub_category.category.name
+    @header = @sub_category.name
   end
+  
 end
+
+
+
