@@ -106,27 +106,28 @@ private
     params.require(:news_letter).permit(:name, :email)
   end
 
-  def display_category
-    @category = Category.find(params[:id])
-    @categories = @category.sub_categories
-    @products = @category.products.paginate(:page => params[:page], :per_page => 20)
-    @header = @category.name
-  end
-
-  # def display_sub_category
-  #   @sub_category = SubCategory.find(params[:id])
-  #   @categories = @sub_category.category.sub_categories
-  #   @products = @sub_category.products.paginate(:page => params[:page], :per_page => 20)
-  #   @header = @sub_category.category.name
+  # def display_category
+  #   @category = Category.find(params[:id])
+  #   @categories = @category.sub_categories
+  #   @products = @category.products.paginate(:page => params[:page], :per_page => 20)
+  #   @header = @category.name
   # end
 
+  def display_sub_category
+    @sub_category = SubCategory.find(params[:id])
+    @categories = @sub_category.category.sub_categories
+    @products = @sub_category.products.paginate(:page => params[:page], :per_page => 20)
+    @header = @sub_category.category.name
+  end
+
+  
  def display_category
     @sub_category = Category.find(params[:id])
     @categories = @sub_category.sub_categories
     @products = @sub_category.products.paginate(:page => params[:page], :per_page => 20)
     @header = @sub_category.name
   end
-  
+
 end
 
 
