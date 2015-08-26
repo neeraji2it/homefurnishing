@@ -1,0 +1,21 @@
+
+<div class="navbar">
+  <div class="navbar-inner">
+  <div class="m2m-progress-bar m2m-position-1"></div>
+     <ul class="nav">
+        <li class="active"><a href="/homes/<%= @product.id %>/single_product">Style</a></li>
+      <li><a href=" /homes/measurements?product_id=<%= @product.id %>&style=<%=params[:style]%>">Measurements</a></li>
+    
+      <li><a href=" /homes/lining?product_id=<%= @product.id %>&style=<%=params[:style]%>&length=<%=params[:length]%>&width=<%=params[:width]%>">Lining</a></li>
+      <li><a href=" /homes/confirm">Confirm</a></li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.nav li
+{
+	width: 11% !important
+}
+
+</style>

@@ -1,0 +1,19 @@
+<h2>Measurements</h2>
+
+style:<%= params[:style] %>
+<%= form_tag lining_homes_path, :method => "GET" do %>
+<h4>Type of Curtain Required</h4>
+ <%= hidden_field_tag :product_id, @product.id %>
+<%= hidden_field_tag :style, params[:style] %>
+<%=  radio_button_tag :fabric, "pair"%> Pair
+<%=  radio_button_tag :fabric, "single"%> Single<br/>
+<br/>
+Length of pole
+<%= text_field_tag :length %><br/>
+<br/>
+Length of Drop
+<%= text_field_tag :width  %>
+<br/><br/>
+<%=  submit_tag :Back %>
+<%=  submit_tag :Continue %>
+<% end %>

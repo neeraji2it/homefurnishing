@@ -1,0 +1,19 @@
+<h2>Confirm</h2><br/>
+Style:<%= params[:style] %><br/>
+Fabric:<%= params[:fabric] %><br/>
+Length:<%= params[:length] %><br/>
+Width:<%= params[:width] %><br/>
+Color: <%= params[:color] %><br/>
+<%= form_tag root_path :method => "GET" do %>
+
+Price <%= @product.price %>
+<%= hidden_field_tag :product_id, @product.id %>
+<%= hidden_field_tag :style, params[:style] %>
+<%= hidden_field_tag :fabric, params[:fabric] %>
+<%= hidden_field_tag :length, params[:length] %>
+<%= hidden_field_tag :width, params[:width] %>
+<%= hidden_field_tag :color, params[:color] %>
+<%= label_tag :quantity %>
+<%= number_field_tag :quantity %> <br/>
+<%= submit_tag  "Add To Busket" %> <br/>
+<% end %>

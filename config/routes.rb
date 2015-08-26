@@ -95,6 +95,9 @@ Furnitureapp::Application.routes.draw do
       post :post_news_letter
       get :index_test
       get :load_image
+      get :measurements
+      get :lining
+      get :confirm
     end
     member do
       get :single_product
@@ -104,10 +107,10 @@ Furnitureapp::Application.routes.draw do
   end 
   resources :line_items
   resources :carts do
-      collection do
-        delete :empty_carts
-      end
+    collection do
+      delete :empty_carts
     end
+  end
   resources :orders do
     member do
       get :confirm

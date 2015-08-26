@@ -41,6 +41,35 @@ def single_product
   @similars = @sub_category.products.where.not(id: @product.id)
 end
 
+def measurements
+    @product = Product.find(params[:product_id])
+     @images = @product.images
+     @sub_category = @product.sub_category.present? ? (@product.sub_category) : @product.category
+     @similars = @sub_category.products.where.not(id: @product.id)
+  end
+
+  def lining
+  @product = Product.find(params[:product_id])
+     @images = @product.images
+     @sub_category = @product.sub_category.present? ? (@product.sub_category) : @product.category
+     @similars = @sub_category.products.where.not(id: @product.id)
+ 
+  end
+
+  def confirm
+ @product = Product.find(params[:product_id])
+     @images = @product.images
+     @sub_category = @product.sub_category.present? ? (@product.sub_category) : @product.category
+     @similars = @sub_category.products.where.not(id: @product.id)
+ 
+  end
+
+
+
+
+
+
+
 def guide
   @guide = BuyingGuide.find(params[:id])
 end
