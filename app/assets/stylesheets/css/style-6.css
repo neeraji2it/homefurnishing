@@ -45,6 +45,7 @@
     border-radius: 0 3px 3px 0;
     padding-left: 16px;
     padding-right: 0;
+    width: 143px;
 }
  
 .nav > li {
@@ -84,7 +85,7 @@
 }
 .nav > li:nth-child(n+6)> .menu_sub{
     right:0;
-    width:auto;
+    /*width:auto;*/
 }
 
 .nav > li:hover > .menu_sub {

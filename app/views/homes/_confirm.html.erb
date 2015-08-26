@@ -4,7 +4,7 @@ Fabric:<%= params[:fabric] %><br/>
 Length:<%= params[:length] %><br/>
 Width:<%= params[:width] %><br/>
 Color: <%= params[:color] %><br/>
-<%= form_tag root_path :method => "GET" do %>
+<%= form_tag line_items_path :method => "POST" do %>
 
 Price <%= @product.price %>
 <%= hidden_field_tag :product_id, @product.id %>
