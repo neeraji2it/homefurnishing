@@ -6,10 +6,10 @@
 <hr/>
 </div>
 
-Style:<%= params[:style] %><br/>
-Fabric:<%= params[:fabric] %><br/>
-Length:<%= params[:length] %><br/>
-Width:<%= params[:width] %><br/>
+Style:&nbsp;&nbsp;<%= params[:style] %><br/>
+Fabric:&nbsp;&nbsp;<%= params[:fabric] %><br/>
+Length:&nbsp;&nbsp;<%= params[:length] %><br/>
+Width:&nbsp;&nbsp;<%= params[:width] %><br/>
 
 <%= form_tag confirm_homes_path, :method => "GET" do %>
 <%= hidden_field_tag :product_id, @product.id %>
@@ -22,7 +22,7 @@ Width:<%= params[:width] %><br/>
 <%=  radio_button_tag :color, "Black Out"%> Black Out<br/>
 <br/>
 
-<%=  submit_tag :Back %>
+<%=  link_to "Back", measurements_homes_path(:product_id => params[:product_id], :style => params[:style]), :class => "btn btn-default"%>
 <%=  submit_tag :Continue %>
 <% end %>
 

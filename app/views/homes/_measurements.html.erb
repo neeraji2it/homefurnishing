@@ -21,12 +21,12 @@ Length of pole
 Length of Drop
 <%= text_field_tag :width  %>
 <br/><br/>
-<%=  submit_tag :Back %>
+<%=  link_to "Back", single_product_home_path(:id => @product.id), :class => "btn btn-default"%>
+
 <%=  submit_tag :Continue %>
 <% end %>
 
 </div>
-
 
 
 <style>
