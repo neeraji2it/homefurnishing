@@ -2,27 +2,77 @@
 <%= render :partial => "single_product" %>
 <% if @sub_category.id == 16 or 25%>
 <%= render :partial => "style_link" %>
+   
+
+<div id="current-selection-summary" class="selection">
+
+<div id="selection-so-far">
+<h4>Your selection so far</h4>
+style:<%= params[:style] %>
+
+<hr/>
+</div>
+
+
+
       <div class="tab-pane fade in active clearfix" id="service1">
-            <div class="panel-heading">
+            <div class="panel-heading1">
               <h4 class="panel-title">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
-                 Choose your Heading Type
-                </a>
+               Choose your Heading Type
               </h4>
             </div>
 
             <div id="collapseOne" class="panel-collapse collapse in">
               <%= form_tag measurements_homes_path, :method => "GET" do %>
-                <div>
-            <%= hidden_field_tag :product_id, @product.id %>
+                        <%= hidden_field_tag :product_id, @product.id %>
                   <%=  radio_button_tag :style, "Eyelit"%> Eyelit
-                  <%=  radio_button_tag :style, "Tabtop"%> Tabtop<br/>
+                  <%=  radio_button_tag :style, "Tabtop"%> Tabtop<br/><br/>
                   <%= submit_tag "Continue",style: 'position: relative; height: 39px; text-align: center; width: 140px; color: white;' %>
-                </div> 
               <% end %>
             </div>
       </div>
       <% end %>
+
+
+</div>
+
+
+
 <%= render :partial => "simialr_product" %>
+
+
+<style>
+.panel-heading1 {
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+
+
+
+
+
+
+<style>
+
+ .selection {
+    background: #f8f7f4 none repeat scroll 0 0;
+    border: 1px solid #dedbd2;
+    margin-top: 14px;
+    overflow: hidden;
+    padding: 11px 15px 15px;
+}
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
 
 

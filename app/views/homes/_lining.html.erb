@@ -1,4 +1,11 @@
-<h2>Choose Lining Color</h2>
+
+<div id="current-selection-summary" class="selection">
+
+<div id="selection-so-far">
+<h4>Your selection so far</h4>
+<hr/>
+</div>
+
 Style:<%= params[:style] %><br/>
 Fabric:<%= params[:fabric] %><br/>
 Length:<%= params[:length] %><br/>
@@ -10,7 +17,7 @@ Width:<%= params[:width] %><br/>
 <%= hidden_field_tag :fabric, params[:fabric] %>
 <%= hidden_field_tag :length, params[:length] %>
 <%= hidden_field_tag :width, params[:width] %>
-<h4>Type of Curtain Required</h4>
+<h4>Choose Lining Color</h4>
 <%=  radio_button_tag :color, "White"%> White
 <%=  radio_button_tag :color, "Black Out"%> Black Out<br/>
 <br/>
@@ -18,3 +25,22 @@ Width:<%= params[:width] %><br/>
 <%=  submit_tag :Back %>
 <%=  submit_tag :Continue %>
 <% end %>
+
+</div>
+
+
+
+
+
+<style>
+
+ .selection {
+    background: #f8f7f4 none repeat scroll 0 0;
+    border: 1px solid #dedbd2;
+    margin-top: 14px;
+    overflow: hidden;
+    padding: 11px 15px 15px;
+}
+
+
+</style>

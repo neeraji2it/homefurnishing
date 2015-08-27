@@ -1,6 +1,13 @@
-<h2>Measurements</h2>
+<div id="current-selection-summary" class="selection">
 
+<div id="selection-so-far">
+<h4>Your selection so far</h4>
 style:<%= params[:style] %>
+
+<hr/>
+</div>
+
+
 <%= form_tag lining_homes_path, :method => "GET" do %>
 <h4>Type of Curtain Required</h4>
  <%= hidden_field_tag :product_id, @product.id %>
@@ -17,3 +24,20 @@ Length of Drop
 <%=  submit_tag :Back %>
 <%=  submit_tag :Continue %>
 <% end %>
+
+</div>
+
+
+
+<style>
+
+ .selection {
+    background: #f8f7f4 none repeat scroll 0 0;
+    border: 1px solid #dedbd2;
+    margin-top: 14px;
+    overflow: hidden;
+    padding: 11px 15px 15px;
+}
+
+
+</style>

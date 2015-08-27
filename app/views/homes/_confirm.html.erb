@@ -1,9 +1,19 @@
-<h2>Confirm</h2><br/>
-Style:<%= params[:style] %><br/>
+
+
+<div id="current-selection-summary" class="selection">
+
+<div id="selection-so-far">
+<h4>Your selection so far</h4>
+style:<%= params[:style] %>
 Fabric:<%= params[:fabric] %><br/>
 Length:<%= params[:length] %><br/>
 Width:<%= params[:width] %><br/>
 Color: <%= params[:color] %><br/>
+<hr/>
+</div>
+
+
+
 <%= form_tag line_items_path :method => "POST" do %>
 
 Price <%= @product.price %>
@@ -17,3 +27,20 @@ Price <%= @product.price %>
 <%= number_field_tag :quantity %> <br/>
 <%= submit_tag  "Add To Busket" %> <br/>
 <% end %>
+</div>
+
+
+
+
+<style>
+
+ .selection {
+    background: #f8f7f4 none repeat scroll 0 0;
+    border: 1px solid #dedbd2;
+    margin-top: 14px;
+    overflow: hidden;
+    padding: 11px 15px 15px;
+}
+
+
+</style>
