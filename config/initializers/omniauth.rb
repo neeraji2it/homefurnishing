@@ -1,5 +1,4 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-    provider :facebook, '885691864836924', '12e5ec4e562cfd2f159f6bec4b6c915a', {:provider_ignores_state => true}
-
+    provider :facebook, '1552426018308605', '659243b0224c8e7d04a20102d254057a' if Rails.env == 'development'
+    provider :facebook, '1563891410493590', '50395c730c6835192153efb460479dc6' if Rails.env == 'production'
 end
-
