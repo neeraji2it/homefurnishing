@@ -83,10 +83,13 @@
     height: auto;
 
 }
-.nav > li:nth-child(n+6)> .menu_sub{
-    right:0;
-    /*width:auto;*/
+
+.nav > li:nth-child(n+6)> .menu_sub {
+right: 165px;
+/* width: auto; */
+/* left: 495px; */
 }
+
 
 .nav > li:hover > .menu_sub {
   opacity: 1;
