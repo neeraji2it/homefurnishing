@@ -117,8 +117,8 @@
         <div class="col-md-6">
 
 <h2>SignIn</h2>
-
-        <%= link_to "Sign in with Facebook", user_omniauth_authorize_path("facebook"), id: "sign_in" %>
+<a href="/users/auth/facebook"><img alt="Facebook button" border="0" height="29" src="/assets/facebook button.png" style="margin-right:-4px;margin-bottom: 5px;" width="107"></a>
+        <%#= link_to "Sign in with Facebook", user_omniauth_authorize_path("facebook"), id: "sign_in" %>
         <br/>
 
             <%= render :partial => '/devise/sessions/new' %>
