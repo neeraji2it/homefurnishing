@@ -1,4 +1,496 @@
-<%= render :partial => "single_product" %>
+<%#= render :partial => "single_product" %>
+<%#= render :partial => "style_link" %>
+<%#= render :partial => "lining"  %>
+<%#= render :partial => "simialr_product" %>
+
+
+
+<%= render :partial => "single_product_image" %>
+
 <%= render :partial => "style_link" %>
-<%= render :partial => "lining"  %>
+
+
+<article class="main_article col-md-4 col-lg-4 col-sm-4 col-xs-12">
+ <div class="m2m-progress-bar m2m-position-1"></div>
+      
+ 
+    <%= form_tag confirm_homes_path, :method => "GET" do %>
+<div style="display:none">
+<input type="hidden" value="UTF-8" name="_dyncharset"> </div>
+<div style="display:none">
+<input type="hidden" value="5839508422138184011" name="_dynSessConf"> </div>
+      
+      <%= hidden_field_tag :product_id, @product.id %>
+<%= hidden_field_tag :style, params[:style] %>
+  
+
+
+<%= hidden_field_tag :fabric, params[:fabric] %>
+<%= hidden_field_tag :length, params[:length] %>
+<%= hidden_field_tag :width, params[:width] %>
+
+                    <div class="mod-selection-summary">
+                      
+
+  <div>
+
+  
+  <div class="mod">
+     
+       <div class="selection" id="current-selection-summary">
+        <div id="selection-so-far">
+          <h2 style="font-size:14px;">Your selection so far</h2>
+         </div>
+       <dl class="selection-summary">
+     
+              <dt><strong>Fabric</strong></dt>
+               
+          <dd id="fabric">
+            <ul>
+                    <li> 
+                John Lewis Kaplan Stripe Curtain, Charcoal
+              </li>
+          <li>
+            <p class="price">
+              <strong> £25.00</strong>
+              
+            </p>
+          </li>
+          
+                     <li>
+                
+                     </li>          
+                     
+                    <li>
+          <p>
+          <span class="product-code">
+            Product code : 68860105
+                </span>
+          </p>
+          </li> 
+      
+          Style:&nbsp;&nbsp;<%= params[:style] %><br/>
+Fabric:&nbsp;&nbsp;<%= params[:fabric] %><br/>
+Length:&nbsp;&nbsp;<%= params[:length] %><br/>
+Width:&nbsp;&nbsp;<%= params[:width] %><br/>
+        </ul>
+            
+            <a id="selection-summary-change-link-0" href="/browse/home-garden/curtains-poles/made-to-measure-curtains-in-7-days/_/N-6tak?navAction=pop&amp;amp;navCount=0"> Edit<span class="audible"></span></a>
+          </dd>
+          
+        
+      
+       </dl>
+    
+    </div>
+  </div>
+  
+  </div>
+
+  <div class="text_div">
+    <div class="col-lg-12">
+       <h2 class="text_heading">Choose Lining Color</h2>
+   </div>
+
+<%=  radio_button_tag :color, "White"%> White
+<%=  radio_button_tag :color, "Black Out"%> Black Out<br/>
+<br/>
+
+
+
+
+  </div>
+  <div class="row" style="padding: 0px 0px 0px 17px;">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+       
+    
+     
+
+    </div>
+  
+  
+
+
+
+
+  </div>
+  <div class="row">
+  <div class="col-lg-12">
+      <div class="col-lg-12">
+      <%=  link_to "Back", measurements_homes_path(:product_id => params[:product_id], :style => params[:style]), :class => "btn btn-default"%>
+
+         <!-- <input class="m2m-continue-button"> -->
+ <%= submit_tag "Continue", :class => "m2m-continue-button" %>
+      </div>
+
+   </div>    
+
+
+  </div>
+
+<% end %>    
+          </article>
+          <div style="clear:both;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <%= render :partial => "single_product_descr" %>
+
+
+
+
+
+
 <%= render :partial => "simialr_product" %>
+
+
+
+
+<style>
+
+.main_article{
+   float: right;
+   padding: 0px 20px 0px 0px;
+
+
+
+}
+
+.m2m-continue-button{
+width: 245px!important;
+height: 26px;
+background: url('/assets/m2m-continue_btn-090712.gif') no-repeat;
+float: right!important;
+cursor: pointer;
+cursor: pointer;
+margin: 0!important;
+border: 0;
+text-indent: -9999px
+
+
+}
+.div_img figure img{
+
+border: 1px solid rgb(209, 200, 200);
+padding: 2px 7px 2px 2px;
+
+}
+.div_img figure img:hover{
+    border: 1px solid green;
+    cursor: pointer;
+
+}
+  .m2m-position-1 {
+}
+}
+background-position: 0 0;
+}
+.m2m-progress-bar {
+float: left;
+width: 330px;
+height: 14px;
+margin: 20px 0 0;
+background: url('/assets/m2m-progress-bar-170712.png') no-repeat;
+}
+#m2m-progress-bar-links li {
+display: inline;
+font-weight: normal;
+font-size: 11px;
+color: #076c2b;
+line-height: 24px;
+}
+.m2m-progress-1 {
+width: 64px;
+float: left;
+text-align: center;
+}
+#m2m-progress-bar-links li {
+display: inline;
+font-weight: normal;
+font-size: 11px;
+color: #076c2b;
+line-height: 24px;
+}
+.m2m-progress-1 {
+width: 64px;
+float: left;
+text-align: center;
+}
+#m2m-progress-bar-links li a {
+text-decoration: none;
+color: #076c2b;
+font-weight: bold;
+}
+.m2m-progress-1 {
+/* width: 64px; */
+float: left;
+text-align: center;
+}
+.m2m-progress-1 {
+width: 64px;
+float: left;
+text-align: center;
+}
+.m2m-progress-2 {
+width: 123px;
+float: left;
+text-align: center;
+}
+.m2m-progress-3 {
+width: 66px;
+float: left;
+text-align: center;
+}
+.m2m-progress-4 {
+width: 77px;
+float: left;
+text-align: center;
+}
+.mod {
+display: inline-block;
+margin-top: 16px;
+width: 100%;
+}
+.mod-selection-summary .mod {
+margin-top: 0;
+}
+#made-to-measure .selection {
+/* border: 1px solid #dedbd2; */
+background: #f8f7f4;
+margin-top: 14px;
+overflow: hidden;
+padding: 11px 15px 15px;
+margin: 0px 0px 0px 33px;
+width: 100%;
+}
+.mod-selection-summary .selection {
+border: 1px solid #dedbd2;
+border-bottom: 0;
+margin-top: 14px;
+overflow: hidden;
+padding: 0 18px 12px;
+}
+.mod-selection-summary .selection {
+/* border: 1px solid #dedbd2; */
+border-bottom: 0;
+margin-top: 14px;
+overflow: hidden;
+padding: 0 18px 12px;
+}
+#made-to-measure #selection-so-far h2 {
+border-top: 0;
+margin-top: 0;
+border-bottom: 1px solid #dedbd2;
+padding-bottom: 10px;
+padding-top: 5px;
+}
+#made-to-measure h2 {
+margin-top: 22px;
+margin-bottom: 14px;
+text-transform: lowercase;
+ padding: 0px 0px 0px 18px;
+}
+.mod-selection-summary h2, .mod-selection-summary .mod-error-box {
+margin-top: 16px;
+}
+#made-to-measure dl.selection-summary {
+padding: 0 0 10px;
+float: left;
+}
+#made-to-measure dl {
+margin: 0;
+padding: 0;
+
+
+
+}
+#made-to-measure dl {
+margin: 0;
+padding: 0;
+}
+.mod-selection-summary dl {
+float: left;
+width: 100%;
+}
+dl {
+width: 235px;
+margin: 10px 0;
+text-align: left;
+}
+#made-to-measure .selection-summary dt {
+width: 75px;
+margin-bottom: 5px;
+}
+#made-to-measure .selection dt {
+font-weight: normal;
+padding: 4px 0 0;
+}
+.mod-selection-summary .selection dt {
+display: inline-block;
+float: left;
+font-weight: bold;
+padding: 16px 14px 0 0;
+width: 68px;
+}
+dt {
+float: left;
+clear: left; 
+width: 160px;
+padding: 5px 5px 0 0;
+}
+#made-to-measure #selection-so-far h2 {
+border-top: 0;
+margin-top: 0;
+border-bottom: 1px solid #dedbd2;
+padding-bottom: 10px;
+padding-top: 5px;
+}
+#made-to-measure .selection {
+ border: 1px solid #dedbd2;
+background: #f8f7f4;
+margin-top: 14px;
+overflow: hidden;
+padding: 11px 15px 15px;
+}
+#made-to-measure #selection-so-far h2 {
+border-top: 0;
+margin-top: 0;
+border-bottom: 1px solid #dedbd2;
+padding-bottom: 10px;
+padding-top: 5px;
+}
+#made-to-measure dl.selection-summary {
+padding: 0 0 10px;
+float: left;
+}
+#made-to-measure dl {
+margin: 0;
+padding: 0;
+}
+.mod-selection-summary dl {
+ float: left;
+width: 100%;
+}
+dl {
+width: 235px; 
+margin: 10px 0;
+text-align: left;
+}
+selection-summary .selection ul {
+float: left;
+width: 165px;
+}
+.mod-selection-summary ul {
+float: left;
+width: 100%;
+}
+#made-to-measure .selection-summary ul li {
+width: 190px;
+margin-bottom: 2px;
+}
+.mod-selection-summary li {
+background: 0;
+padding-left: 0;
+}
+dl li {
+list-style-type: none;
+}
+#made-to-measure .selection p {
+padding-bottom: 7px;
+}
+.mod-selection-summary .selection p, .mod-selection-summary .selection ul {
+/* float: left; */
+width: 165px;
+}
+
+p {
+line-height: 16px;
+}
+.mod .price strong {
+color: #393939;
+font-weight: bold;
+}
+#made-to-measure .selection p {
+padding-bottom: 7px;
+}
+#made-to-measure .selection-summary .product-code {
+font-size: 12px;
+}
+.product-code {
+font-size: 11px;
+}
+#made-to-measure .selection a {
+font-size: 11px;
+font-weight: bold;
+text-decoration: none;
+}
+.mod-selection-summary .selection a {
+float: right;
+font-size: 11px;
+}
+.mod-selection-summary .selection a {
+float: right;
+font-size: 11px;
+}
+#made-to-measure .selection {
+border: 1px solid #dedbd2;
+background: #f8f7f4;
+margin-top: 14px;
+overflow: hidden;
+padding: 11px 15px 15px;
+}
+.mod-selection-summary .selection a {
+float: right;
+font-size: 11px;
+}
+#made-to-measure .selection a {
+font-size: 11px;
+font-weight: bold;
+text-decoration: none;
+}
+.mod-selection-summary .mod {
+margin-top: 0;
+}
+.mod {
+display: inline-block;
+margin-top: 16px;
+width: 100%;
+}
+.btn_ul{
+  list-style-type: none;
+
+}
+.btn_ul li{
+  display: inline;
+  padding-left: 12px;
+
+}
+.btn_ul li a:hover{
+   text-decoration: underline;
+
+
+}
+h2.text_heading{
+  font-size: 13px;
+
+
+}
+
+
+</style>

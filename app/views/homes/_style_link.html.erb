@@ -1,21 +1,97 @@
 
-<div class="navbar">
-  <div class="navbar-inner">
-  <div class="m2m-progress-bar m2m-position-1"></div>
-     <ul class="nav">
-        <li class="active"><a href="/homes/<%= @product.id %>/single_product">Style</a></li>
-      <li><a href=" /homes/measurements?product_id=<%= @product.id %>&style=<%=params[:style]%>">Measurements</a></li>
-    
-      <li><a href=" /homes/lining?product_id=<%= @product.id %>&style=<%=params[:style]%>&length=<%=params[:length]%>&width=<%=params[:width]%>">Lining</a></li>
-      <li><a href=" /homes/confirm">Confirm</a></li>
-    </ul>
-  </div>
-</div>
 
-<style>
-.nav li
-{
-	width: 11% !important
+  <ul id="m2m-progress-bar-links" style="width:120%;">
+          
+                      <li class="m2m-progress-1">
+   <a href="/homes/<%= @product.id %>/single_product">1. Style</a>
+                    </li>
+                    
+                      <li class="m2m-progress-2">
+                 <a href=" /homes/measurements?product_id=<%= @product.id %>&style=<%=params[:style]%>">   2. Measurements</a>
+                  </li>
+                  
+                      <li class="m2m-progress-3">
+                  <a href=" /homes/lining?product_id=<%= @product.id %>&style=<%=params[:style]%>&length=<%=params[:length]%>&width=<%=params[:width]%>">  3. Lining</a>
+                  </li>
+                  
+                      <li class="m2m-progress-4">
+                  <a href=" /homes/confirm">  4. Confirm</a>
+                  </li>
+                  
+
+      </ul>
+
+
+
+      <style>
+
+  .m2m-position-1 {
 }
+}
+background-position: 0 0;
+}
+.m2m-progress-bar {
+float: left;
+width: 330px;
+height: 14px;
+margin: 20px 0 0;
+background: url('/assets/m2m-progress-bar-170712.png') no-repeat;
+}
+#m2m-progress-bar-links li {
+display: inline;
+font-weight: normal;
+font-size: 11px;
+color: #076c2b;
+line-height: 24px;
+}
+.m2m-progress-1 {
+width: 64px;
+float: left;
+text-align: center;
+}
+#m2m-progress-bar-links li {
+display: inline;
+font-weight: normal;
+font-size: 11px;
+color: #076c2b;
+line-height: 24px;
+}
+.m2m-progress-1 {
+width: 64px;
+float: left;
+text-align: center;
+}
+#m2m-progress-bar-links li a {
+text-decoration: none;
+color: #076c2b;
+font-weight: bold;
+}
+.m2m-progress-1 {
+/* width: 64px; */
+float: left;
+text-align: center;
+}
+.m2m-progress-1 {
+width: 64px;
+float: left;
+text-align: center;
+}
+.m2m-progress-2 {
+width: 123px;
+float: left;
+text-align: center;
+}
+.m2m-progress-3 {
+width: 66px;
+float: left;
+text-align: center;
+}
+.m2m-progress-4 {
+width: 77px;
+float: left;
+text-align: center;
+}
+
+
 
 </style>

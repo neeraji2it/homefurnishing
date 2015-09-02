@@ -1,0 +1,25 @@
+  <div class="box-maincheckout">
+    <div class="container">
+      <div class="box-category">
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8  margn-tp">
+
+
+            <div class="box-product col-xs-12 col-sm-12 col-md-12 col-lg-12 " style=" width:100%">
+              <img id="zoom_09" style="width:100%" src="<%= @product.images.present? ? (@product.images.first.avatar.url) : "/assets/missing.png" %>" data-zoom-image="<%= @product.images.present? ? (@product.images.first.avatar.url(:original)) : "/assets/missing.png" %>" />
+            </div>
+
+            <% if @images.present? && @images.size > 1 %>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margn-tp" id="gallery_09">
+              <div class="slid" style="position: relative;">
+                <div class="row">
+                  <% @images.each do |image| %>
+                    <a href="#" class="elevatezoom-gallery active " data-image="<%= image.avatar.url(:small) %>" data-zoom-image="<%= image.avatar.url(:original) %>">
+                      <img class="img-thmb img-brder" src="<%= image.avatar.url(:small) %>" height="50" width="35" />
+                    </a>                       
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+          </div>
