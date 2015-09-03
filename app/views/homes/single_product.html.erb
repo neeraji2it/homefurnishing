@@ -1,25 +1,16 @@
 
-<%#= render :partial => "single_product" %>
 <%= render :partial => "single_product_image" %>
 <% if @sub_category.id == 16 %>
 
-
 <%= render :partial => "style_link" %>
-
-
-
-
 
 <article class="main_article col-md-4 col-lg-4 col-sm-4 col-xs-12">
  <div class="m2m-progress-bar m2m-position-1"></div>
       
-    <%#= render :partial => "style_link" %>
-
  <%= form_tag measurements_homes_path, :id => "made-to-measure",:method => "GET" do %>
                         <%= hidden_field_tag :product_id, @product.id %>
                   
    
-
 <div style="display:none">
 <input type="hidden" value="UTF-8" name="_dyncharset"> </div>
 <div style="display:none">
@@ -27,9 +18,8 @@
       
                     
       
-
                     <div class="mod-selection-summary">
-                      
+                     
 
   <div>
 
@@ -123,7 +113,7 @@
   <div class="col-lg-12">
       <div class="col-lg-12">
          <!-- <input class="m2m-continue-button"> -->
- <%= submit_tag "Continue", :class => "m2m-continue-button" %>
+ <%= submit_tag "Continue", :style => "background-color:none;", :id => "btn_color",:class => "m2m-continue-button" %>
       </div>
 
    </div>    
@@ -180,6 +170,11 @@
     overflow: hidden;
     padding: 11px 15px 15px;
 }
+#btn_color{
+  background-color:none !important; 
+
+
+}
 
 
 </style>
@@ -202,7 +197,8 @@
 }
 
 .m2m-continue-button{
-width: 245px!important;
+/*width: 245px!important;*/
+width: 177px !important;
 height: 26px;
 background: url('/assets/m2m-continue_btn-090712.gif') no-repeat;
 float: right!important;
@@ -210,7 +206,7 @@ cursor: pointer;
 cursor: pointer;
 margin: 0!important;
 border: 0;
-text-indent: -9999px
+text-indent: -9999px;
 
 
 }
