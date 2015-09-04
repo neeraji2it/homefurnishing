@@ -1,9 +1,3 @@
-<%#= render :partial => "single_product" %>
-<%#= render :partial => "style_link" %>
-<%#= render :partial => "confirm" %>
-<%#= render :partial => "simialr_product" %>
-
-
 <%= render :partial => "single_product_image" %>
 <%= render :partial => "style_link" %>
 <article class="main_article col-md-4 col-lg-4 col-sm-4 col-xs-12">
@@ -36,33 +30,18 @@
          </div>
        <dl class="selection-summary">
      
-              <dt><strong>Fabric</strong></dt>
+          
                
-          <dd id="fabric">
+        
             <ul>
                     <li> 
-                John Lewis Kaplan Stripe Curtain, Charcoal
+         Product Name: <%= @product.name %>
               </li>
           <li>
-            <p class="price">
-              <strong> £25.00</strong>
-              
-            </p>
+        
           </li>
-          
-                     <li>
-                
-                     </li>          
-                     
-                    <li>
-          <p>
-          <span class="product-code">
-            Product code : 68860105
-                </span>
-          </p>
-          </li> 
-                Price <%= @product.price %>
-
+     
+         
           Style:&nbsp;&nbsp;<%= params[:style] %><br/>
 Fabric:&nbsp;&nbsp;<%= params[:fabric] %><br/>
 Length:&nbsp;&nbsp;<%= params[:length] %><br/>
@@ -70,9 +49,7 @@ Width:&nbsp;&nbsp;<%= params[:width] %><br/>
 color:&nbsp;&nbsp;<%= params[:color] %><br/>
         </ul>
   
-       
-          </dd>
-          
+      
         
       
        </dl>
@@ -91,7 +68,7 @@ color:&nbsp;&nbsp;<%= params[:color] %><br/>
                 <li>
                   Price
                   <strong class="price">
-                    £117.50
+                    <%= @product.price %>
                   </strong>
                 </li>
                 </ul>
