@@ -51,16 +51,17 @@
       </div>
       <div class="box-continue clearfix">
         <%= link_to "Continue Shopping", homes_path, :class => "btn btn-sm" %>
-        <%= link_to "Empty Shopping Cart",empty_carts_carts_path, :method => :delete, :class => "btn btn-sm btn-cart-clear" %>
+        <%#= link_to "Empty Shopping Cart",empty_carts_carts_path, :method => :delete, :class => "btn btn-sm btn-cart-clear" %>
       </div>
       <div class="box-estimate">
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="box-subtotal clearfix">
-              <div class="box-sub">
+              <div id = "proceed_btn" style="height: 50px;
+line-height: 18px;">
                 <div class="frow frow-sub">
-                  <div>Grand total:</div>
-                  <div style="font-weight:bold">Rs.<%= @cart.total_price %></div>
+                  <div  >Grand total:</div>
+                  <div style="font-weight:bold;color:white;">Rs.<%= @cart.total_price %></div>
                 </div>
               </div>
             </div>
@@ -68,8 +69,8 @@
           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
           </div>
           <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-            <p>
-              <%= link_to "Proceed to Checkout", current_user ? new_order_path : checkout_information_orders_path , class: "btn btn-proceed", title: "Proceed to Checkout" %>
+            <p class="pull-right pull_right">
+              <%= link_to "Proceed to Checkout", current_user ? new_order_path : checkout_information_orders_path , class: "btn btn-proceed", :id => "proceed_btn", title: "Proceed to Checkout" %>
             </p>
           </div>
         </div>
@@ -92,3 +93,22 @@
     });
 }
 </script>
+<style type="text/css">
+  p.pull_right{
+  margin: 0px -11px 0px 0px;
+
+
+  }
+  #proceed_btn{
+    background-color: grey !important;
+    padding: 14px;
+    border-radius: 1px;
+    box-shadow: 0px 0px 1px 0px rgb(101, 102, 101);
+    border: 1px solid transparent;
+    cursor: pointer;
+
+
+  }
+
+
+</style>

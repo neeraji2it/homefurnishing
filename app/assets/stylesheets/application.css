@@ -86,7 +86,7 @@ div#da-header #da-header-top #da-logo-img img {
 .btn-cart-clear {margin-left: 600px !important;}
 
 .circleQ {
-  background-color: #0eabdf;
+  background-color: #000000;
   border: 1px solid #e3e3e3;
   border-radius: 40px;
   color: #fff;
@@ -128,7 +128,7 @@ div#da-header #da-header-top #da-logo-img img {
 
 .responsive-pagination .text-float-left{
     
-     margin-left: 3%;
+     margin-left: 1%;
 
 }
 .text-float-left{float: left;}

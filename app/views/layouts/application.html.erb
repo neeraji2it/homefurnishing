@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Rosara</title>
+  <link rel="icon" type="image/gif" href="/assets/favi.icon/" />
+      <!-- <link rel="icon" type="image/x-icon" href="/assets/logo_home.png" /> -->
   <%= stylesheet_link_tag "application", "css/default.css", :media => "all" %>
   <%= javascript_include_tag "application","js/bootstrap/bootstrap.min.js", "js/bootstrap/ie-bootstrap-carousel.min.js", "js/gallery/jquery.elevatezoom.min.js", "js/custom.js" %>
     <!--[if IE 9]>
@@ -34,8 +36,8 @@
              <!--  help  link removed -->
            </li>
            <% if !current_user %>
-           <%= link_to "signUp", "#", :onclick => "signup()" %>&nbsp;&nbsp;&nbsp;&nbsp;
-           <%= link_to "Login", "#", :onclick => "signin()" %>
+           <%= link_to "Signup", "#", :onclick => "signup()",:class => "changecolor" %>&nbsp;&nbsp;&nbsp;&nbsp;
+           <%= link_to "Login", "#", :onclick => "signin()" , :class => "changecolor"%>
 
            <% end %>
 
@@ -156,3 +158,11 @@
     $("#SignUp").modal();
   }
 </script>
+
+<style>
+.changecolor
+{
+color: #c29d12;
+}
+
+</style>

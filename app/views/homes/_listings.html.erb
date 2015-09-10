@@ -94,22 +94,16 @@
                 <% @products.each do |product| %>
                   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
                     <div class="box-productimg">
-                      <%= image_tag(product.images.present? ? (product.images.first.avatar.url(:small)) : "/assets/missing.png", height: "317px", width: "309px") %>
-                      <div class="productimg-hover">
-                        <ul>
-                          <!-- <li><a href="#" title="" class="icon-zoom" data-toggle="modal" data-target="#myModal-<%= product.id %>" onclick="zoomer(<%= product.id %>);"></a></li> -->
-                          <li><%= link_to '<i class="icon-open"></i>'.html_safe, single_product_home_path(product.id) %></li>
-                        </ul>
-                      </div>
+
+                      <%= link_to image_tag(product.images.present? ? (product.images.first.avatar.url(:small)) : "/assets/missing.png", height: "317px", width: "337px"), single_product_home_path(product)  %>
+
+                   
                     </div>
                     <div class="box-content" style="margin-bottom: 20px;">
-                      <!-- <h3>Rs. <%= product.price %></h3> -->
                       <h4><%= product.name.capitalize %></h4>
-                      <%# if product.discount? %>
-                        <!-- <span class="circleSmall"> -->
-                          <!-- <%#= product.discount%>% -->
-                        <!-- </span> -->
-                      <%#end %>
+ <h3>Rs. <%= product.price %></h3> 
+                      
+                     
                     </div>
                   </div>
 
@@ -119,7 +113,7 @@
               </div>
               <div class="row">
                 <div class="box-pagination responsive-pagination">
-                  <span class="text-float-left">Items <%= @products.count%> total</span>
+                  <span class="text-float-left">Total Items <%= @products.count%> </span>
                   <span class="text-float-right"><%= will_paginate @products, renderer: BootstrapPagination::Rails %></span>
                 </div>
               </div>
@@ -172,5 +166,18 @@ h2 {
     font-weight: 700;
     margin: 0;
     padding: 0 0 12px; 
+}
+
+.box-content {
+border: 1px solid goldenrod;
+}
+
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: #d2691e !important;
+    border-color: #d2691e !important;
+    color: #fff;
+    cursor: default;
+    z-index: 2;
 }
 </style>
