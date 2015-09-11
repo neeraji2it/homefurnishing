@@ -110,6 +110,7 @@ end
 def post_news_letter
   @news_letter = NewsLetter.new(news_letter_params)
   if @news_letter.save
+    Newsletter.send_contact(@news_letter).deliver
     flash[:notice] = "Thanks, you have been subscribed to news letter."
   end
   respond_to do |format|
