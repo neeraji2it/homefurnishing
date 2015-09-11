@@ -25,6 +25,7 @@ class HomesController < ApplicationController
   def offers
     if params.has_key?(:param1) && params.has_key?(:param2)
       category_id = params[:param1]
+      @sub_category = Category.find(category_id)
       discount = params[:param2]
       @products = Product.offer(category_id, discount).paginate(:page => params[:page], :per_page => 20)
     end
