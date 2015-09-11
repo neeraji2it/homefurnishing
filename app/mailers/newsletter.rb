@@ -1,5 +1,5 @@
 class Newsletter < ActionMailer::Base
-  #default from: "from@example.com"
+  default from: "oe.member1@gmail.com"
   def send_contact(news_letter)
     @news_letter = news_letter
    # mail(:to => "info@rosara.in", :subject => 'New User Registered')
