@@ -147,12 +147,13 @@ shopping. Redeeming is very simple – simply register and get your unique code,
   $(function() {
     $('.bxslider').bxSlider({
       slideWidth: 308,
-      infiniteLoop: true,
       speed: 4000,
+      auto: true,
       pager: false,
       autoHover: true,
       minSlides: 3,
       maxSlides: 12,
+      moveSlides: 3,
       slideMargin: 20,
       responsive: true,
       adaptiveHeight: true
@@ -160,12 +161,10 @@ shopping. Redeeming is very simple – simply register and get your unique code,
 
     $('.bxslider-banner').bxSlider({
       auto: true,
-      infiniteLoop: true,
       speed: 4000,
       pager: false,
       autoHover: true,
       minSlides: 1,
-      maxSlides: 12,
       slideMargin: 0,
       responsive: true,
       adaptiveHeight: true
@@ -184,20 +183,4 @@ shopping. Redeeming is very simple – simply register and get your unique code,
       adaptiveHeight: true
     });
   });
-</script>
-<script type="text/javascript" charset="utf-8">
-      $(function() {
-        $('.bxslider').bxSlider({
-          auto: true,  
-          slideWidth: 308,
-          infiniteLoop: true,
-          speed: 3000,
-          pager: false,
-          autoHover: true,
-          minSlides: 1,
-          maxSlides: 12,
-          slideMargin: 20,
-          adaptiveHeight: true
-        });
-      });
 </script>

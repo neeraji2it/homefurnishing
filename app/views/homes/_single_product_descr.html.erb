@@ -63,7 +63,7 @@
               </div>
               <div class="box-producT">
                 <div class="box-select">
-                  <div class="row">
+                  <div class="row" id="row-div">
                     <% if(@product.quantity.blank? || @product.quantity == 0) %>
                     No Items There In Stock.
                     <% else %>
@@ -92,5 +92,9 @@ text-align: left;
 cursor: pointer;
 }
 
+div#row-div{
+padding: 0px 0px 0px 13px;
 
+
+}
       </style>

@@ -128,7 +128,7 @@ input[class*=col-], select[class*=col-], textarea[class*=col-] { float: none; }
 .mandatory { color: #F00; }
 .container { max-width: 1060px; margin: 0px auto; -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; transition: all 0.4s ease-out; }
 #logo { padding-bottom: 0px; text-align: left; background: none; margin:25px 0 6px}
-#logo a { margin-bottom: 6px; display: inline-block; height: 65px; width: 295px; text-indent: -999em; background: url(/assets/rosara.jpg) no-repeat 0px 0px; background-size: 120px 34px;   }
+#logo a { margin-bottom: 6px; display: inline-block; height: 65px; width: 295px; text-indent: -999em; background: url(/assets/rosara.jpg) no-repeat 0px 0px; background-size: 120px 32px;   }
 .table-box .trow { float: left; width: 100%; padding: 4px 0px; border-bottom: #D0D0D0 solid 1px; -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; transition: all 0.4s ease-out; }
 .table-box .trow:first-child { font-weight: bold; border-bottom: #D0D0D0 solid 2px; }
 .table-box .trow:nth-child(even), .table tr:nth-child(even) { background-color: #fff; }
@@ -167,7 +167,7 @@ button.close:hover { background: none; }
 .nrow > div:first-child { font-weight: bold; }
 .f11 { font-size: 11px; }
 .bold { font-weight: bold; }
-.bposi { position: relative;  top: 31px;  margin-right: -15px; }
+.bposi { position: relative;  top: 31px;  margin-right: 53px; }
 .bposi-order { position: relative; top: -1px; }
 footer { font-family: Tahoma, Geneva, sans-serif; }
 h1 { font-size: 28px; color: #545454; font-family: 'Conv_18925_HelveticaNeueLt_0'; text-align: center; padding-bottom: 17px; text-transform: uppercase; background: url(/assets/images/dot-gray.png) repeat-x 0px 19px; }
