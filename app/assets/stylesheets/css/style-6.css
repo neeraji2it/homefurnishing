@@ -382,13 +382,13 @@ ul.navbar-nav > li a:hover, ul.navbar-nav > li a.active { color: #FFF; border-ra
 
 
 @media (max-width:1199px){
-    .nav > li > a{ padding-right:81px}
+    .nav > li > a{ padding-right:81px;}
 .nav > li > {width:12%;}
 }
 @media (max-width: 1024px){
     
-    .nav > li > a{ padding-right: 80px}
+    .nav > li > a{ padding-right: 80px;}
 }
 @media (max-width: 768px){
-    .nav > li > a{ padding-right: 30px}
+    .nav > li > a{ padding-right: 30px;}
 }
