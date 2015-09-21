@@ -78,3 +78,5 @@ gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
 
 gem 'omniauth'
 gem 'omniauth-facebook'  
+#payments
+gem 'payuindia', '~> 0.1.1'
