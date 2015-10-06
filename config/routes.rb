@@ -123,7 +123,9 @@ Furnitureapp::Application.routes.draw do
       get :success
     end
   end
-     post '/payu_callback'=>'carts#payu_return'
+  #   post '/payu_callback'=>'carts#payu_return'
+  post 'payment_confirm', to: 'carts#payment_confirm', as: 'payment_confirm'
+
   root 'homes#index'
   devise_scope :user do
     get '/auth/:provider/callback' => 'omniauth_callbacks#facebook'

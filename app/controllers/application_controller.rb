@@ -67,6 +67,13 @@ def current_user
 end
   helper_method :current_user
 
+def ccavenue
+   return @ccavenue = Ccavenue::Payment.new("54748","51801B638F37174638873A7C89A03D9C")
+end
+
+
+
+
 
 protected
 def get_layout

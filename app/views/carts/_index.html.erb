@@ -73,16 +73,21 @@ line-height: 18px;">
               <%= link_to "Proceed to Checkout", current_user ? new_order_path : checkout_information_orders_path , class: "btn btn-proceed", :id => "proceed_btn", title: "Proceed to Checkout" %>
             </p>
                       <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-          <% payment_form_for_payu 'tzY9Gq ', 'WX29JXLQ',
-      :txnid => "rrrrr4444",
-      :amount => @cart.total_price,
-      :productinfo => 'Book',
-      :firstname => 'abc',
-      :email => 'abc@example.com',
-      :phone => '1234567890',
-      :surl => 'http://rosara.in/payu_callback',
-      :furl => 'http://rosara.in/payu_callback',
-      :html => { :id => 'payment-form' } %>
+        
+
+<form id="redirect" method="post" name="redirect" action="http://www.ccavenue.com/shopzone/cc_details.jsp">
+        <input type="hidden" name="encRequest" value="<%= @encRequest %>">
+        <input type="hidden" name="Merchant_Id" value="<%=@CCAVENUE_MERCHANT_ID%>">
+    </form>
+    
+    <script>
+    </script>
+
+
+
+
+
+
           </div>
           </div>
         </div>
@@ -103,7 +108,9 @@ line-height: 18px;">
         cart: cart
       }
     });
-}
+  }
+          document.getElementById("redirect").submit();   
+
 </script>
 <style type="text/css">
   p.pull_right{
